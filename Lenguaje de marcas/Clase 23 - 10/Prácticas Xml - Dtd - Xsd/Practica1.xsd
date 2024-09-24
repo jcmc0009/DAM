@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+
+  <xs:element name="pedido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nombre_cliente"/>
+        <xs:element ref="articulos"/>
+        <xs:element ref="direccion"/>
+     </xs:sequence>  
+    </xs:complexType>         
+  </xs:element>
+    
+ <xs:element name="nombre_cliente">
+    <xs:complexType>
+              <xs:sequence>
+                   <xs:element name="nombre"  type="xs:string"/>
+                   <xs:element name="primer_apellido"  type="xs:string"/>
+                   <xs:element name="segundo_apellido"  type="xs:string"/>
+              </xs:sequence>
+          </xs:complexType>
+ </xs:element> 
+
+ <xs:element name="articulos">
+   <xs:complexType>
+      <xs:sequence>
+          <xs:element name="articulo" maxOccurs="unbounded">
+             <xs:complexType>
+                   <xs:simpleContent>
+                      <xs:extension base="xs:string"> 
+                         <xs:attribute name="cantidad" type="xs:positiveInteger" use="required"/>
+                      </xs:extension>
+                   </xs:simpleContent>
+             </xs:complexType>
+          </xs:element>
+      </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+
+
+
+<xs:element name="direccion">
+<xs:complexType>
+    <xs:sequence>
+        <xs:element name="calle"  type="xs:string"/>
+        <xs:element name="numero"  type="xs:positiveInteger"/>
+        <xs:element name="portal"  type="xs:string"/>
+        <xs:element name="planta"  type="xs:positiveInteger"/>
+        <xs:element name="codigo_postal"  type="xs:integer"/>
+        <xs:element name="provincia"  type="xs:string"/>
+    </xs:sequence>
+</xs:complexType>
+</xs:element>
+
+
+
+</xs:schema>

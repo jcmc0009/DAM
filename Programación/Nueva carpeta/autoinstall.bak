@@ -1,0 +1,8 @@
+; SYNC3 Consumer Application Upgrade - Release 3.4.22200 - Only for Nav/EU assemblies.
+
+[SYNCGen3.0_ALL]
+Item1 = GB5T-14G386-AD
+Open1 = SyncMyRide\GB5T-14G386-AD.tar.gz
+Item2 = LU5T-14G386-CA
+Open2 = SyncMyRide\LU5T-14G386-CA.tar.gz
+Options = Delay,Include,Transaction

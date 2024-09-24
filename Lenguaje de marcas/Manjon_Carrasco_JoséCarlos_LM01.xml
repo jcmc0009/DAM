@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE universidades>
+<!-- El documento ha sido estructurado por categorías independientes, es decir, por etiquetas
+independientes vinculadas unas entre otras mediante el uso de atributos, las categorías principales
+dentro de una universidad es son
+informacion_general, grados, alumnos y profesores, todo ello vinculado entre ellos mediante el uso
+de atributos, por ejemplo mediante el valor del id_grado podremos encontrar facilmente  los alumnos
+matriculados en dicho grado, al igual que sabemos el profesor y toda la información que esta
+contiene haciendo una búsqueda del valor de id_profesorado que tengamos en cada asignatura, así
+todo es independiente uno de otro, pero todo está relacionado
+-->
+<universidades>
+    <universidad titularidad="pública" identificador="LI-001">
+        <informacion_general>
+            <nombre>Universidad de Linares</nombre>
+            <web>www.uli.es</web>
+            <telefono tipo="Fijo">953132456789</telefono>
+            <direccion>
+                <via>Calle</via>
+                <nombre_Via>Sagunto</nombre_Via>
+                <numero>99</numero>
+                <codigo_Postal>23700</codigo_Postal>
+                <provincia>Jaen</provincia>
+            </direccion>
+        </informacion_general>
+        <grados>
+            <grado id_grado="lina" tipo_estudios="presencial">
+                <informacion_general>
+                    <nombre>Grado en estudios linarenses</nombre>
+                    <numero_creditos>25</numero_creditos>
+                    <numero_cursos>2</numero_cursos>
+                    <nota_corte>9,9</nota_corte>
+                    <numero_plazas año_convocatoria="2019">88</numero_plazas>
+                    <numero_asignaturas>4</numero_asignaturas>
+                </informacion_general>
+                <asignaturas>
+                    <asignatura codigo_asignatura="mine" turno="tarde" curso="1">
+                        <informacion_asignatura>
+                            <titulo>Mineria</titulo>
+                            <numero_creditos>3</numero_creditos>
+                            <profesor id_profesorado="mgg"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                    <asignatura codigo_asignatura="teor" turno="mañana" curso="1">
+                        <informacion_asignatura>
+                            <titulo>Teoría de la taranta</titulo>
+                            <numero_creditos>2</numero_creditos>
+                            <profesor id_profesorado="bdr"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                    <asignatura codigo_asignatura="usos" turno="tarde" curso="2">
+                        <informacion_asignatura>
+                            <titulo>Usos del plomo</titulo>
+                            <numero_creditos>10</numero_creditos>
+                            <profesor id_profesorado="pjf">
+                            </profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                    <asignatura codigo_asignatura="cons" turno="mañana" curso="2">
+                        <informacion_asignatura>
+                            <titulo>Construcciones mineras</titulo>
+                            <numero_creditos>10</numero_creditos>
+                            <profesor id_profesorado="tlf">
+                            </profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                </asignaturas>
+            </grado>
+            <grado id_grado="geol" tipo_estudios="distancia">
+                <informacion_general>
+                    <nombre>Grado en geología </nombre>
+                    <numero_creditos>35</numero_creditos>
+                    <numero_cursos>2</numero_cursos>
+                    <nota_corte>5,0</nota_corte>
+                    <numero_plazas año_convocatoria="2022">50</numero_plazas>
+                    <numero_asignaturas>4</numero_asignaturas>
+                </informacion_general>
+                <asignaturas>
+                    <asignatura codigo_asignatura="vulc" turno="tarde" curso="1">
+                        <informacion_asignatura>
+                            <titulo>Vulcanología</titulo>
+                            <numero_creditos>13</numero_creditos>
+                            <profesor id_profesorado="wzb"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                    <asignatura codigo_asignatura="cris" turno="mañana" curso="1">
+                        <informacion_asignatura>
+                            <titulo>Cristalografía</titulo>
+                            <numero_creditos>2</numero_creditos>
+                            <profesor id_profesorado="awc"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                    <asignatura codigo_asignatura="fisi" turno="tarde" curso="2">
+                        <informacion_asignatura>
+                            <titulo>Física</titulo>
+                            <numero_creditos>10</numero_creditos>
+                            <profesor id_profesorado="kkk"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                    <asignatura codigo_asignatura="Cons" turno="mañana" curso="2">
+                        <informacion_asignatura>
+                            <titulo>Matemáticas</titulo>
+                            <numero_creditos>10</numero_creditos>
+                            <profesor id_profesorado="hcd"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                </asignaturas>
+            </grado>
+        </grados>
+        <alumnos>
+            <alumno dni="12345678-A" grado_matriculado="lina">
+                <informacion_general>
+                    <nombre>Javier</nombre>
+                    <apellidos>
+                        <primer_apellido>Romero</primer_apellido>
+                        <segundo_apelido>Canela</segundo_apelido>
+                    </apellidos>
+                    <telefono tipo="Movil">987654123</telefono>
+                </informacion_general>
+                <informacion_matricula>
+                    <asignatura_matriculada_anyo_corriente>
+                        <cantidad>4</cantidad>
+                        <coste_matricula moneda="€">
+                            <coste>1000</coste>
+                        </coste_matricula>
+                    </asignatura_matriculada_anyo_corriente>
+                </informacion_matricula>
+            </alumno>
+            <alumno dni="14445678-B" grado_matriculado="lina">
+                <informacion_general>
+                    <nombre>Barney</nombre>
+                    <apellidos>
+                        <primer_apellido>Gumble</primer_apellido>
+                        <segundo_apelido>Evergreen</segundo_apelido>
+                    </apellidos>
+                    <telefono tipo="Movil">987114123</telefono>
+                </informacion_general>
+                <informacion_matricula>
+                    <asignatura_matriculada_anyo_corriente>
+                        <cantidad>1</cantidad>
+                        <coste_matricula moneda="€">
+                            <coste>250</coste>
+                        </coste_matricula>
+                    </asignatura_matriculada_anyo_corriente>
+                </informacion_matricula>
+            </alumno>
+            <alumno dni="14445678-B" grado_matriculado="lina">
+                <informacion_general>
+                    <nombre>Nedward</nombre>
+                    <apellidos>
+                        <primer_apellido>Flanders</primer_apellido>
+                        <segundo_apelido>Lizard</segundo_apelido>
+                    </apellidos>
+                    <telefono tipo="Movil">987174123</telefono>
+                </informacion_general>
+                <informacion_matricula>
+                    <asignatura_matriculada_anyo_corriente>
+                        <cantidad>4</cantidad>
+                        <coste_matricula moneda="€">
+                            <coste>250</coste>
+                        </coste_matricula>
+                    </asignatura_matriculada_anyo_corriente>
+                </informacion_matricula>
+            </alumno>
+            <alumno dni="33345678-Z" grado_matriculado="geol">
+                <informacion_general>
+                    <nombre>Homer</nombre>
+                    <apellidos>
+                        <primer_apellido>Jay</primer_apellido>
+                        <segundo_apelido>Simpson</segundo_apelido>
+                    </apellidos>
+                    <telefono tipo="Movil">922254123</telefono>
+                </informacion_general>
+                <informacion_matricula>
+                    <asignatura_matriculada_anyo_corriente>
+                        <cantidad>2</cantidad>
+                        <coste_matricula moneda="€">
+                            <coste>550</coste>
+                        </coste_matricula>
+                    </asignatura_matriculada_anyo_corriente>
+                </informacion_matricula>
+            </alumno>
+            <alumno dni="234345678-C" grado_matriculado="geol">
+                <informacion_general>
+                    <nombre>Maurice </nombre>
+                    <apellidos>
+                        <primer_apellido>Lester</primer_apellido>
+                        <segundo_apelido>Szyslak</segundo_apelido>
+                    </apellidos>
+                    <telefono tipo="Movil">772254123</telefono>
+                </informacion_general>
+                <informacion_matricula>
+                    <asignatura_matriculada_anyo_corriente>
+                        <cantidad>1</cantidad>
+                        <coste_matricula moneda="€">
+                            <coste>225</coste>
+                        </coste_matricula>
+                    </asignatura_matriculada_anyo_corriente>
+                </informacion_matricula>
+            </alumno>
+            <alumno dni="666345678-C" grado_matriculado="geol">
+                <informacion_general>
+                    <nombre>Apu</nombre>
+                    <apellidos>
+                        <primer_apellido>Nahasapeemapetilon</primer_apellido>
+                        <segundo_apelido>Badulake</segundo_apelido>
+                    </apellidos>
+                    <telefono tipo="Movil">172254123</telefono>
+                </informacion_general>
+                <informacion_matricula>
+                    <asignatura_matriculada_anyo_corriente>
+                        <cantidad>3</cantidad>
+                        <coste_matricula moneda="€">
+                            <coste>750</coste>
+                        </coste_matricula>
+                    </asignatura_matriculada_anyo_corriente>
+                </informacion_matricula>
+            </alumno>
+        </alumnos>
+        <profesores>
+            <profesor id_profesorado="mgg">
+                <nombre>Manolo</nombre>
+                <apellidos>
+                    <primer_apellido>García</primer_apellido>
+                    <segundo_apelido>García</segundo_apelido>
+                </apellidos>
+            </profesor>
+            <profesor id_profesorado="bdr">
+                <nombre>Bender</nombre>
+                <primer_apellido>Doblador</primer_apellido>
+                <segundo_apelido>Rodriguez</segundo_apelido>
+            </profesor>
+            <profesor id_profesorado="pjf">
+                <nombre>Philip</nombre>
+                <apellidos>
+                    <primer_apellido>James</primer_apellido>
+                    <segundo_apelido>Fry</segundo_apelido>
+                </apellidos>
+            </profesor>
+            <profesor id_profesorado="tlf">
+                <nombre>Turanga</nombre>
+                <apellidos>
+                    <primer_apellido>Leela</primer_apellido>
+                    <segundo_apelido>Futurama</segundo_apelido>
+                </apellidos>
+            </profesor>
+            <profesor id_profesorado="wzb">
+                <nombre>Webelo</nombre>
+                <apellidos>
+                    <primer_apellido>Zapp</primer_apellido>
+                    <segundo_apelido>Brannigan</segundo_apelido>
+                </apellidos>
+            </profesor>
+            <profesor id_profesorado="awc">
+                <nombre>Amy</nombre>
+                <apellidos>
+                    <primer_apellido>Wong</primer_apellido>
+                    <segundo_apelido>Casper</segundo_apelido>
+                </apellidos>
+            </profesor>
+            <profesor id_profesorado="kkk">
+                <nombre>Kif</nombre>
+                <apellidos>
+                    <primer_apellido>Kroker</primer_apellido>
+                    <segundo_apelido>Karpato</segundo_apelido>
+                </apellidos>
+            </profesor>
+            <profesor id_profesorado="hcd">
+                <nombre>Hermes</nombre>
+                <apellidos>
+                    <primer_apellido>Conrad</primer_apellido>
+                    <segundo_apelido>Dell</segundo_apelido>
+                </apellidos>
+            </profesor>
+        </profesores>
+    </universidad>
+    <universidad titularidad="privada" identificador="CO-001">
+        <informacion_general>
+            <nombre>Universidad de cornezuelo</nombre>
+            <web>www.ucor.es</web>
+            <telefono tipo="Fijo">853132456789</telefono>
+            <direccion>
+                <via>Calle</via>
+                <nombre_Via>Comarcal</nombre_Via>
+                <numero>2</numero>
+                <codigo_Postal>23702</codigo_Postal>
+                <provincia>Jaen</provincia>
+            </direccion>
+        </informacion_general>
+        <grados>
+            <grado id_grado="mate" tipo_estudios="presencial">
+                <informacion_general>
+                    <nombre>Grado en Matemáticas</nombre>
+                    <numero_creditos>35</numero_creditos>
+                    <numero_cursos>2</numero_cursos>
+                    <nota_corte>9,3</nota_corte>
+                    <numero_plazas año_convocatoria="2023">55</numero_plazas>
+                    <numero_asignaturas>5</numero_asignaturas>
+                </informacion_general>
+                <asignaturas>
+                    <asignatura codigo_asignatura="alge" turno="tarde" curso="1">
+                        <informacion_asignatura>
+                            <titulo>Álgebra conmutativa</titulo>
+                            <numero_creditos>3</numero_creditos>
+                            <profesor id_profesorado="jmmma"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                    <asignatura codigo_asignatura="ecua" turno="mañana" curso="1">
+                        <informacion_asignatura>
+                            <titulo>Ecuaciones diferenciales</titulo>
+                            <numero_creditos>2</numero_creditos>
+                            <profesor id_profesorado="cpg"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                    <asignatura codigo_asignatura="logi" turno="tarde" curso="2">
+                        <informacion_asignatura>
+                            <titulo>Lógica</titulo>
+                            <numero_creditos>10</numero_creditos>
+                            <profesor id_profesorado="jcml"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                    <asignatura codigo_asignatura="prob" turno="mañana" curso="2">
+                        <informacion_asignatura>
+                            <titulo>Probabilidad</titulo>
+                            <numero_creditos>10</numero_creditos>
+                            <profesor id_profesorado="jdjg"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                    <asignatura codigo_asignatura="prob" turno="mañana" curso="2">
+                        <informacion_asignatura>
+                            <titulo>Topología algebráica</titulo>
+                            <numero_creditos>10</numero_creditos>
+                            <profesor id_profesorado="cei"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                </asignaturas>
+            </grado>
+            <grado id_grado="fisi" tipo_estudios="presencial">
+                <informacion_general>
+                    <nombre>Grado en Física</nombre>
+                    <numero_creditos>35</numero_creditos>
+                    <numero_cursos>2</numero_cursos>
+                    <nota_corte>7,3</nota_corte>
+                    <numero_plazas año_convocatoria="2023">40</numero_plazas>
+                    <numero_asignaturas>5</numero_asignaturas>
+                </informacion_general>
+                <asignaturas>
+                    <asignatura codigo_asignatura="quim" turno="tarde" curso="1">
+                        <informacion_asignatura>
+                            <titulo>Química general</titulo>
+                            <numero_creditos>3</numero_creditos>
+                            <profesor id_profesorado="ama"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                    <asignatura codigo_asignatura="prog" turno="mañana" curso="1">
+                        <informacion_asignatura>
+                            <titulo>Programación</titulo>
+                            <numero_creditos>2</numero_creditos>
+                            <profesor id_profesorado="pbs"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                    <asignatura codigo_asignatura="tecn" turno="tarde" curso="2">
+                        <informacion_asignatura>
+                            <titulo>Técicas experimentales básicas</titulo>
+                            <numero_creditos>10</numero_creditos>
+                            <profesor id_profesorado="egv"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                    <asignatura codigo_asignatura="meca" turno="mañana" curso="2">
+                        <informacion_asignatura>
+                            <titulo>Mecánica y ondas</titulo>
+                            <numero_creditos>10</numero_creditos>
+                            <profesor id_profesorado="mnc"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                    <asignatura codigo_asignatura="prob" turno="mañana" curso="2">
+                        <informacion_asignatura>
+                            <titulo>Termodinámica</titulo>
+                            <numero_creditos>10</numero_creditos>
+                            <profesor id_profesorado="vgg"></profesor>
+                        </informacion_asignatura>
+                    </asignatura>
+                </asignaturas>
+            </grado>
+        </grados>
+        <alumnos>
+            <alumno dni="442345678-A" grado_matriculado="mate">
+                <informacion_general>
+                    <nombre>Rubén</nombre>
+                    <apellidos>
+                        <primer_apellido>Romerales</primer_apellido>
+                        <segundo_apelido>Coche</segundo_apelido>
+                    </apellidos>
+                    <telefono tipo="Movil">127654123</telefono>
+                </informacion_general>
+                <informacion_matricula>
+                    <asignatura_matriculada_anyo_corriente>
+                        <cantidad>3</cantidad>
+                        <coste_matricula moneda="€">
+                            <coste>750</coste>
+                        </coste_matricula>
+                    </asignatura_matriculada_anyo_corriente>
+                </informacion_matricula>
+            </alumno>
+            <alumno dni="11145678-B" grado_matriculado="mate">
+                <informacion_general>
+                    <nombre>José Antonio</nombre>
+                    <apellidos>García García</apellidos>
+                    <telefono tipo="Movil">13457114123</telefono>
+                </informacion_general>
+                <informacion_matricula>
+                    <asignatura_matriculada_anyo_corriente>
+                        <cantidad>1</cantidad>
+                        <coste_matricula moneda="€">
+                            <coste>350</coste>
+                        </coste_matricula>
+                    </asignatura_matriculada_anyo_corriente>
+                </informacion_matricula>
+            </alumno>
+            <alumno dni="98745678-B" grado_matriculado="mate">
+                <informacion_general>
+                    <nombre>Alfredo</nombre>
+                    <apellidos>
+                        <primer_apellido>Expósito</primer_apellido>
+                        <segundo_apelido>Herrero</segundo_apelido>
+                    </apellidos>
+                    <telefono tipo="Movil">1237174123</telefono>
+                </informacion_general>
+                <informacion_matricula>
+                    <asignatura_matriculada_anyo_corriente>
+                        <cantidad>3</cantidad>
+                        <coste_matricula moneda="€">
+                            <coste>440</coste>
+                        </coste_matricula>
+                    </asignatura_matriculada_anyo_corriente>
+                </informacion_matricula>
+            </alumno>
+            <alumno dni="33399678-Z" grado_matriculado="mate">
+                <informacion_general>
+                    <nombre>Félix</nombre>
+                    <apellidos>
+                        <primer_apellido>Herrera</primer_apellido>
+                        <segundo_apelido>Campiñés</segundo_apelido>
+                    </apellidos>
+                    <telefono tipo="Movil">442254123</telefono>
+                </informacion_general>
+                <informacion_matricula>
+                    <asignatura_matriculada_anyo_corriente>
+                        <cantidad>2</cantidad>
+                        <coste_matricula moneda="€">
+                            <coste>650</coste>
+                        </coste_matricula>
+                    </asignatura_matriculada_anyo_corriente>
+                </informacion_matricula>
+            </alumno>
+            <alumno dni="234345678-C" grado_matriculado="fisi">
+                <informacion_general>
+                    <nombre>Mauricio</nombre>
+                    <apellidos>
+                        <primer_apellido>Colmenero</primer_apellido>
+                        <segundo_apelido>García</segundo_apelido>
+                    </apellidos>
+                    <telefono tipo="Movil">22254123</telefono>
+                </informacion_general>
+                <informacion_matricula>
+                    <asignatura_matriculada_anyo_corriente>
+                        <cantidad>2</cantidad>
+                        <coste_matricula moneda="€">
+                            <coste>500</coste>
+                        </coste_matricula>
+                    </asignatura_matriculada_anyo_corriente>
+                </informacion_matricula>
+            </alumno>
+            <alumno dni="126345678-C" grado_matriculado="fisi">
+                <informacion_general>
+                    <nombre>Luis mariano</nombre>
+                    <apellidos>
+                        <primer_apellido>Linares</primer_apellido>
+                        <segundo_apelido>García</segundo_apelido>
+                    </apellidos>
+                    <telefono tipo="Movil">22254123</telefono>
+                </informacion_general>
+                <informacion_matricula>
+                    <asignatura_matriculada_anyo_corriente>
+                        <cantidad>3</cantidad>
+                        <coste_matricula moneda="€">
+                            <coste>770</coste>
+                        </coste_matricula>
+                    </asignatura_matriculada_anyo_corriente>
+                </informacion_matricula>
+            </alumno>
+        </alumnos>
+        <profesores>
+            <profesor id_profesorado="jmma">
+                <nombre>José Mario</nombre>
+                <apellidos>
+                    <primer_apellido>Martínez</primer_apellido>
+                    <segundo_apelido>Arroyo</segundo_apelido>
+                </apellidos>
+            </profesor>
+            <profesor id_profesorado="cpg">
+                <nombre>Carlos</nombre>
+                <primer_apellido>Prieto</primer_apellido>
+                <segundo_apelido>Guijarro</segundo_apelido>
+            </profesor>
+            <profesor id_profesorado="jcml">
+                <nombre>Juan Carlos</nombre>
+                <primer_apellido>Marín</primer_apellido>
+                <segundo_apelido>López</segundo_apelido>
+            </profesor>
+            <profesor id_profesorado="jdjg">
+                <nombre>Juan Daniel</nombre>
+                <primer_apellido>Jiménez</primer_apellido>
+                <segundo_apelido>González</segundo_apelido>
+            </profesor>
+            <profesor id_profesorado="cei">
+                <nombre>Carlos</nombre>
+                <primer_apellido>Expósito</primer_apellido>
+                <segundo_apelido>Iribarren</segundo_apelido>
+            </profesor>
+            <profesor id_profesorado="ama">
+                <nombre>Alejandro</nombre>
+                <primer_apellido>Martínez</primer_apellido>
+                <segundo_apelido>Anacleto</segundo_apelido>
+            </profesor>
+            <profesor id_profesorado="pbs">
+                <nombre>Patricio</nombre>
+                <primer_apellido>Babasasa</primer_apellido>
+                <segundo_apelido>Saratoga</segundo_apelido>
+            </profesor>
+            <profesor id_profesorado="egv">
+                <nombre>Enrique</nombre>
+                <primer_apellido>Gomez</primer_apellido>
+                <segundo_apelido>Vader</segundo_apelido>
+            </profesor>
+            <profesor id_profesorado="mnc">
+                <nombre>Mónica</nombre>
+                <primer_apellido>Naranjo</primer_apellido>
+                <segundo_apelido>Carrasco</segundo_apelido>
+            </profesor>
+            <profesor id_profesorado="vgg">
+                <nombre>Víctor</nombre>
+                <primer_apellido>García</primer_apellido>
+                <segundo_apelido>González</segundo_apelido>
+            </profesor>
+        </profesores>
+    </universidad>
+</universidades>

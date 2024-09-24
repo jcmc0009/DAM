@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+    /* Permite controlar el modelo de caja de CSS y determinar si el ancho y la altura de un elemento incluyen o no su borde y relleno */
+    font-family: Arial, Helvetica, sans-serif;
+    /*Fuentes predeterminadas*/
+}
+
+body {
+    margin: 0;
+    /*Elimina el margen predeterminado del cuerpo */
+    background-color: #282a36;
+    /* Establece el color de fondo del cuerpo en un tono oscuro de gris azulado */
+}
+
+/*Cabecera**/
+
+.cabecera,
+.pie {
+    height: 150px;
+    /* La cabecera y el pie de página tendrán una altura de 150px */
+    background-color: #44475a;
+    /* El color de fondo de la cabecera y el pie de página será un tono más oscuro de gris azulado */
+    color: #FFF;
+    /* El color del texto en la cabecera y el pie de página será blanco */
+    /* distribuiremos con flex el contenido */
+    display: flex;
+    /* La cabecera y el pie de página usarán un diseño flexible para organizar sus elementos hijos */
+}
+
+/* El logo, el banner y el titulo_cabecera tendrá una altura del 100%. Ocuparán completamente el contenedor padre */
+.logo {
+    height: 100%;
+    order: 3;
+    /* Logo a la derecha */
+}
+
+.banner {
+    height: 100%;
+    order: 1;
+    /* Banner a la izquierda */
+}
+
+.titulo_cabecera {
+    height: 100%;
+    order: 2;
+    /* hacemos que rellene todo el espacio sobrante */
+    flex-grow: 1;
+    /* para centrado vertical de h1, con margen auto */
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo_cabecera h1 {
+    margin: auto 2%;
+    /* Tendrá un margen automático en la parte superior e inferior y un margen del 2% en la izquierda y la derecha */
+}
+
+
+/*Seccion principal*/
+.cuerpo {
+    display: flex; /* El cuerpo usará un diseño flexible para organizar sus elementos hijos */
+   margin: 20px; /* El cuerpo tendrá un margen de 20px en todos los lados */
+}
+.body {
+    background-color: #282a36;
+    color: white;
+    text-align: center;
+}
+.principal {
+    flex-grow: 1; /* El contenido principal crecerá para ocupar todo el espacio extra en su contenedor padre */
+    margin-left: 10px; /* El contenido principal tendrá un margen de 10px en la izquierda */
+}
+
+/*Pie de página*/
+
+#enlaceDerecho {
+    text-align: right;
+}
+
+.pie label {
+    display: block;
+    /* La etiqueta en el pie de página se mostrará como un bloque */
+    margin-bottom: 20px;
+    /* La etiqueta tendrá un margen de 20px en la parte inferior */
+    margin-left: 7px;
+    /* La etiqueta tendrá un margen de 7px en la izquierda */
+}
+
+input,
+button {
+    border-radius: 5px;
+    /* Los campos de entrada y los botones tendrán esquinas redondeadas con un radio de 5px */
+    line-height: 25px;
+    /* Los campos de entrada y los botones tendrán una altura de línea de 25px */
+    display: inline-block;
+    /* Los campos de entrada y los botones se mostrarán como bloques en línea */
+    margin: 0 7px;
+    /* Los campos de entrada y los botones tendrán un margen de 0 en la parte superior e inferior y de 7px en la izquierda y la derecha */
+}
+
+button {
+    padding: 0 10px;
+    /* Los botones tendrán un relleno de 0 en la parte superior e inferior y de 10px en la izquierda y la derecha */
+    background-color: #ff4500;
+    /* Color rojo brillante */
+    color: #FFF;
+    /* El color del texto en los botones será blanco */
+    border: 1px outset #FFF;
+    /* Los botones tendrán un borde de 1px de ancho, de estilo outset y de color blanco */
+}
+
+.pie>* {
+    margin: 0 40px;
+    /* Todos los elementos directamente dentro del pie de página tendrán un margen de 0 en la parte superior e inferior y de 40px en la izquierda y la derecha */
+    align-self: center;
+    /* Todos los elementos directamente dentro del pie de página se alinearán al centro del eje transversal */
+}
+
+.pie>form {
+    flex-grow: 1;
+    /* El formulario en el pie de página crecerá para ocupar todo el espacio extra en su contenedor padre */
+}
+
+/*seccion tabla*/
+.enlaceTabla {
+    color: #16C0CD;
+}
+
+.tabla {
+    color: white;
+    border-collapse: collapse;
+    text-align: center;
+    width: 70%;
+
+    th {
+
+        background-color: #27335C;
+    }
+
+    td {
+
+        background-color: #3E4970;
+    }
+}
+
+.seccion {
+    background-color: #8b0000;
+    /* Color rojizo de fondo*/
+    color: #FFF;
+    /* El color del texto en las secciones será blanco */
+    border-radius: 10px;
+    /* Las esquinas de las secciones serán redondeadas con un radio de 10px */
+    padding: 20px;
+    /* Las secciones tendrán un relleno de 20px en todos los lados */
+    box-shadow: 0 4px 4px #000;
+    /* Las secciones tendrán una sombra de caja negra que se desplazará 4px hacia abajo y tendrá un desenfoque de 4px */
+    margin: 20px;
+}
+
+
+
+.boton {
+    background-color: #FF4500;
+    color: white;
+}
+
+/*Navegación*/
+
+
+.navegacion {
+    float: right;
+    margin: 20px;
+    min-width: 300px;
+    /* ancho mínimo de 300px */
+    background-color: #696969;
+    /* Color gris */
+    border-radius: 10px;
+    /** Las esquinas de la navegación serán redondeadas con un radio de 10px */
+    padding: 0 10px;
+    /*Espacio generado alrededor del contenido: 0 en la parte superior e inferior y de 10px en la izquierda y la derecha */
+    box-shadow: 0 4px 4px #000;
+    /*sombra negra que se desplazará 4px hacia abajo y tendrá un desenfoque de 4px */
+}
+
+.navegacion a {
+    text-decoration: none;
+    /* Los enlaces en la navegación no tendrán ninguna decoración de texto */
+    color: inherit;
+    /* Los enlaces en la navegación heredarán el color de su elemento padre */
+}
+
+.m_claro {
+    margin: 20px 0;
+    /* Los elementos con la clase .m_claro tendrán un margen de 20px en la parte superior e inferior y de 0 en la izquierda y la derecha */
+    padding: 0;
+    /*NO tendrán espacio alrededor del contenido*/
+}
+
+
+.m_claro>li:hover {
+    background-color: #ddadba
+        /*Tono rosa cuando se pasa el ratón*/
+}
+
+.m_claro>li,
+.m_intermedio {
+    border-radius: 10px;
+    /*esquinas redondeadas con un radio de 10px */
+    box-shadow: 0 4px 4px #666;
+    /*sombra de caja gris que se desplazará 4px hacia abajo y tendrá un desenfoque de 4px */
+}
+
+.m_claro>li {
+    background-color: #d3d3d3;
+    /* Color gris claro */
+    list-style-position: inside;
+    /* Los marcadores de lista de estos elementos se colocarán dentro del contenido del elemento de lista */
+    margin: 10px;
+    /* Estos elementos tendrán un margen de 10px en todos los lados */
+    padding-left: 10px;
+    /* Estos elementos tendrán un relleno de 10px en la izquierda */
+}
+
+/*Imágenes que sirven de items a la lista no ordenada*/
+.mit_home {
+    list-style-image: url("../images/home.png");
+    /* Los elementos con la clase .mit_home tendrán una imagen home.png marcador de lista */
+}
+
+.mit_groups {
+    /* Los elementos con la clase .mit_groups tendrán una imagen groups.png como marcador de lista */
+}
+
+.mit_contact {
+    /* Los elementos con la clase .mit_contact tendrán una imagen contact.png como marcador de lista */
+}
+
+.mit_trassierra {
+    /* Los elementos con la clase .mit_contact tendrán una imagen contact.png como marcador de lista */
+}
+
+.mit_libro {
+    /* Los elementos con la clase .mit_libro tendrán una imagen de libro.png como marcador de lista */
+    padding-bottom: 20px;
+    /* Los elementos con la clase .mit_libro tendrán un relleno de 20px en la parte inferior */
+}
+
+.m_intermedio {}
+
+.m_intermedio>li>a:hover {
+    /* Cuando se pasa el cursor sobre los enlaces directamente dentro de los elementos de lista en .m_intermedio, su peso de fuente cambiará a 900 */
+}
+
+.m_intermedio .m_claro>li {
+    /* Los elementos de lista directamente dentro de .m_claro que están dentro de .m_intermedio tendrán marcadores de lista en minúsculas latinas */
+}

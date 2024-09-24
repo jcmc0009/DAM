@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- **************************** CANAL ********************************-->
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es-es">
+  <!-- Elemento obligatorios: title, id y updated -->
+  <!-- Elementos recomendados: author, link-->
+  <!-- Elementos opcionales: category, contributor, generator, icon, logo, rights, subtitle -->
+  <title type="text">Canal de noticias curiosas</title>
+  <id>http://www.noticiasamogollon.com/</id>
+  <updated>2024-02-29T11:32:06Z</updated>
+  <link rel="self" type="application/atom+xml" href="feed/canal.atom" />
+  <link rel="alternate" type="text/html" href="http://www.noticias.com" />
+  <author>
+    <name>Jose Carlos Manjon carrasco</name>
+    <email>jmancar736@g.educaand.es</email>
+  </author>
+  <category term="Cultura" />
+  <category term="Oposiciones" />
+  <category term="Sede Electrónica" />
+  <generator version="1.0">vim</generator>
+  <icon>img/icon.jpg</icon>
+  <logo>img/logo.png</logo>
+  <rights>Creative Common</rights>
+  <subtitle type="text">Noticias de castulo</subtitle>
+
+  <!--*************************
+  NOTICIAS *******************************-->
+  <!-- 1º Noticia -->
+  <entry>
+    <!-- Elemento obligatorios: title, id y updated -->
+    <!-- Elementos recomendados: author, link, content y summary-->
+    <!-- Elementos opcionales: category, contributor, published, source, rights -->
+    <title>Primera noticia de actualidad</title>
+    <id>https://www.aytocordoba.com/feed/noticia1</id>
+    <updated>2024-01-10T12:24:26Z</updated>
+    <author>
+      <name>Bart Simpson</name>
+      <email>jc0.1@hotmail.com</email>
+    </author>
+    <source>
+      <title>Enlace a la fuente</title>
+      <id>https://www.aytocordoba.com/feed/</id>
+      <updated>2024-03-04T10:10:01Z</updated>
+      <link href="https://www.aytocordoba.com/feed/" />
+    </source>
+    <link rel="alternate" type="text/html" href="http://www.americannews.com/today" />
+    <content>Ejemplo de noticia, hoy en Linares ha hecho buen tiempo</content>
+
+    <category term="Cultura" />
+    <contributor>
+      <name>Ana Gómez</name>
+    </contributor>
+    <published>2018-05-10T09:12:30Z</published>
+    <rights type="text">Copyright</rights>
+  </entry>
+
+  <!-- 2º Noticia -->
+  <entry>
+    <title>Segunda noticia de actualidad, he comido cachopo</title>
+    <link rel="alternate" type="text/html" href="https://www.titular.es/hoy/primera.html#titular" />
+    <updated>2024-01-11T12:24:26Z</updated>
+    <id>https://www.aytocordoba.com/feed/noticia2</id>
+    <content>Esta es una noticia local de actualidad de linares</content>
+    <category term="Oposiciones" />
+    <author>
+      <name>Homer Simpson</name>
+      <email>jc0.1@hotmail.com</email>
+    </author>
+  </entry>
+
+  <!-- 3º Noticia -->
+  <entry>
+    <title>Otra noticia de ejemplo</title>
+    <link rel="alternate" type="text/html"
+      href="http://www.quepais.com/actualidad/segunda.html#titular" />
+    <updated>2024-01-12T12:24:26Z</updated>
+    <id>https://www.aytocordoba.com/feed/noticia3</id>
+    <content>Aqui podras encontrar todo tipo de noticias de actualidad</content>
+    <author>
+      <name>Maggie Simpson</name>
+      <email>jc0.1@hotmail.com</email>
+    </author>
+    <published>2018-05-06T12:24:26Z</published>
+    <rights type="text">Copyright</rights>
+    <category term="Sede Electrónica" />
+  </entry>
+
+</feed>
+<!-- Más información:
+https://validator.w3.org/feed/docs/atom.html
+http://www.atomenabled.org/developers/syndication/
+-->

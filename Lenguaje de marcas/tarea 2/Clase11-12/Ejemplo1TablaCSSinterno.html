@@ -1,0 +1,48 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento. Define que este documento es HTML5 -->
+<html lang="es"> <!-- Elemento raíz del documento HTML. El atributo 'lang' especifica que el idioma del documento es español -->
+<head> <!-- Contiene metadatos/información sobre el documento -->
+    <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres para el documento -->
+    <title>EjemploTablaCSSInterno</title> <!-- Título que se muestra en la barra del navegador -->
+    <style>
+    table, th, td {
+      border: 2px solid black; /* Establece un borde sólido de 2px para las tablas, celdas de encabezado y celdas de datos */
+      border-collapse: collapse; /* Combina los bordes de las celdas en un solo borde */
+    }
+    th {
+      background-color: #f1f1f1; /* Establece el color de fondo de las celdas de encabezado a #f1f1f1 */
+    }
+    </style>
+</head>
+<body> <!-- Contiene el contenido principal del documento HTML -->
+
+<table> <!-- Crea una tabla -->
+  <tr> <!-- Crea una fila de la tabla -->
+    <th style="background-color:red;">Rojo</th> <!-- Crea una celda de encabezado con fondo rojo y texto "Rojo" -->
+    <th style="background-color:orange;">Naranja</th> <!-- Crea una celda de encabezado con fondo naranja y texto "Naranja" -->
+    <th style="background-color:yellow;">Amarillo</th> <!-- Crea una celda de encabezado con fondo amarillo y texto "Amarillo" -->
+    <th style="background-color:green;">Verde</th> <!-- Crea una celda de encabezado con fondo verde y texto "Verde" -->
+    <th style="background-color:blue;">Azul</th> <!-- Crea una celda de encabezado con fondo azul y texto "Azul" -->
+  </tr>
+  <tr> <!-- Crea una nueva fila de la tabla -->
+    <td colspan="3" style="text-align:center;">Celdas Unidas</td> <!-- Crea una celda que abarca 3 columnas con texto "Celdas Unidas" centrado -->
+    <td><u>Subrayado</u></td> <!-- Crea una celda con texto "Subrayado" subrayado -->
+    <td><b>Negrita</b></td> <!-- Crea una celda con texto "Negrita" en negrita -->
+  </tr>
+  <tr> <!-- Crea una nueva fila de la tabla -->
+    <td><del>Tachado</del></td> <!-- Crea una celda con texto "Tachado" tachado -->
+    <td> <!-- Crea una celda -->
+      <ol> <!-- Crea una lista ordenada -->
+        <li>Uno</li> <!-- Elemento de la lista "Uno" -->
+        <li>Dos</li> <!-- Elemento de la lista "Dos" -->
+        <li>Tres</li> <!-- Elemento de la lista "Tres" -->
+      </ol>
+    </td>
+    <td colspan="3"><a href="http://www.iestrassierra.com">www.iestrassierra.com</a></td> <!-- Crea una celda que abarca 3 columnas con un enlace a "www.iestrassierra.com" -->
+  </tr>
+  <tr> <!-- Crea una nueva fila de la tabla -->
+    <td colspan="5" style="text-align:center;">Última fila</td> <!-- Crea una celda que abarca 5 columnas con texto "Última fila" centrado -->
+  </tr>
+</table> <!-- Fin de la tabla -->
+
+</body> <!-- Fin del contenido principal del documento HTML -->
+</html> <!-- Fin del documento HTML -->

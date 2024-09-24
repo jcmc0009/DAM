@@ -1,0 +1,137 @@
+
+body{
+    background-color: white;
+    font-family: 'Lobster Two', cursive;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header{
+    margin:auto;
+    text-align: center;
+	border:3px solid black;
+	background-color: #F9D16B;
+	padding:20px;
+    margin:10px;
+border-radius: 20px;		
+}
+
+header img{
+  margin-top:20px;
+  max-width: 600px;
+border-radius: 20px;
+}
+
+header h1{
+  font-size:2em;
+  text-transform: uppercase;
+}
+
+header h3{
+  margin-top:-2px;
+  font-weight: 200;
+}
+
+
+.apartado1{
+ 	
+  padding:20px;
+  margin:10px;
+  border:3px solid black; 
+ border-radius: 20px;
+}	
+
+.apartado2{
+ 	
+  padding:20px;
+  margin:10px;
+  border:3px solid black;
+ border-radius: 20px; 
+}	
+
+.apartado3{
+  	
+  padding:20px;
+  margin:10px;
+  border:3px solid black; 
+  border-radius: 20px;
+}
+
+.apartado4{
+ 	
+  padding:20px;
+  margin:10px;
+  border:3px solid black; 
+border-radius: 20px;
+  
+}
+
+.apartado5{ 	
+  padding:20px;
+  margin:10px;
+  border:5px solid orange; 
+border-radius: 20px;
+  
+}
+
+
+table, th, td {
+            width:900px;
+            margin: 0 auto;
+            text-align: center;
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+                }
+		  
+		  
+.resumen {
+    background-color: white;
+	border:4px black solid;
+    margin: 5px;
+    padding:5px;
+    width: auto;
+    justify-content: center;
+    
+    display:flex;
+    flex-direction:row;
+	flex-wrap:wrap;
+    justify-content: center;
+    align-items: stretch; 
+border-radius: 20px;   
+}
+
+.bloque {
+    padding:2vw;
+    flex:1 0 40%;
+    min-width: 350px;
+	border: 4px solid black;
+    margin:4px;  
+border-radius: 20px;  
+}
+
+.titulo{
+    background-color:#F16592;
+    margin:2px;
+    padding:2px;
+    width:100%; 
+border-radius: 20px;   
+}
+
+.informacion{
+    background-color:#F9D16B;
+    margin:5px;
+    padding:5px; 
+border-radius: 20px;   
+}
+
+footer{
+  background-color: #AD8CF1;	
+  padding:20px;
+  margin:10px;
+  border:3px solid black;
+border-radius: 20px; 
+}
+    
+

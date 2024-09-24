@@ -1,0 +1,406 @@
+* {
+    box-sizing: border-box;
+    /* Permite controlar el modelo de caja de CSS y determinar si el ancho y la altura de un elemento incluyen o no su borde y relleno */
+    font-family: Arial, Helvetica, sans-serif;
+    /*Definimos las fuentes por defecto*/
+}
+
+body {
+    margin: 0;
+    /*Elimina el margen predeterminado del cuerpo */
+    background-color: #282a36;
+    /* Establece el color de fondo del cuerpo en un tono oscuro de gris azulado */
+}
+
+/****** Cabecera y pie caja**********************************/
+.cabecera,
+.pie {
+    height: 150px;
+    /* La cabecera y el pie de página tendrán una altura de 150px */
+    background-color: #44475a;
+    /* El color de fondo de la cabecera y el pie de página será un tono más oscuro de gris azulado */
+    color: #FFF;
+    /* El color del texto en la cabecera y el pie de página será blanco */
+    /* distribuiremos con flex el contenido */
+    display: flex;
+    /* La cabecera y el pie de página usarán un diseño flexible para organizar sus elementos hijos */
+    flex-direction: row;
+    /*Establecemos la dirección en la que se colocan los elementos flexibles dentro de un contenedor flex*/
+    justify-content: space-between;
+    /*Con justify-content ara distribuir el espacio entre y alrededor de los elementos a lo largo del eje principal, y 
+    con "space-between", los elementos se distribuyen de manera uniforme a lo largo del contenedo */
+}
+
+.cabecera h1 {
+    display: inline-flex;
+    /*Esto significa que el elemento se comportará como un elemento en línea, sepodrá utilizar las propiedades flexbox para controlar su diseño 
+    y distribución de contenido. */
+    align-self: center;
+    /*Alineamos al centro el texto que se inserte dentro de la clase cabecera y que sea h1*/
+    order: 2;
+    /*Colocará el elemento en el centro*/
+
+}
+
+/* El logo ,banner y clase "enlace_img" tendrá una altura del 100%. Ocuparán completamente el contenedor padre */
+.logo {
+    height: 100%;
+    order: 3;
+    /* Logo a la derecha */
+
+}
+
+.enlace_img {
+    height: 100%;
+    
+}
+
+
+
+.banner_img {
+    height: 100%;
+    /*Establezco la altura dela imagen con la clase banner_img al 100% del alto del contenedor*/
+    order: 1;
+    /*Colocará el elemento a la izquierda*/
+}
+
+
+
+/****** Navegación ****************************************************************/
+
+.navegacion {
+    min-width: 300px;
+    /* ancho mínimo de 300px */
+    background-color: #696969;
+    /* Color gris */
+    border-radius: 10px;
+    /** Las esquinas de la navegación serán redondeadas con un radio de 10px */
+    padding: 0 10px;
+    /*Espacio generado alrededor del contenido: 0 en la parte superior e inferior y de 10px en la izquierda y la derecha */
+    box-shadow: 0 4px 4px #000;
+    /*sombra negra que se desplazará 4px hacia abajo y tendrá un desenfoque de 4px */
+
+}
+
+.navegacion a {
+    text-decoration: none;
+    /* Los enlaces en la navegación no tendrán ninguna decoración de texto */
+    color: inherit;
+    /* Los enlaces en la navegación heredarán el color de su elemento padre */
+}
+
+.m_claro {
+    margin: 20px 0px;
+    /* Los elementos con la clase .m_claro tendrán un margen de 20px en la parte superior e inferior y de 0 en la izquierda y la derecha */
+    padding: 0;
+    /*NO tendrán espacio alrededor del contenido*/
+    width: 100%;
+    /* Elemento tendrá un ancho del 100%. Ocuparán completamente el contenedor padre */
+    height: 100%;
+    /* Elemento tendrá tendrá una altura del 100%. Ocuparán completamente el contenedor padre */
+
+}
+
+
+.m_claro>li:hover {
+    background-color: #ddadba
+        /*Tono rosa cuando se pasa el ratón*/
+}
+
+.m_claro>li,
+.m_intermedio {
+    border-radius: 10px;
+    /*esquinas redondeadas con un radio de 10px */
+    box-shadow: 0 4px 4px #666;
+    /*sombra de caja gris que se desplazará 4px hacia abajo y tendrá un desenfoque de 4px */
+}
+
+.m_claro>li {
+    background-color: #d3d3d3;
+    /* Color gris claro */
+    list-style-position: inside;
+    /* Los marcadores de lista de estos elementos se colocarán dentro del contenido del elemento de lista */
+    margin: 10px 0px;
+    /* Estos elementos tendrán un margen de 10px en todos los lados */
+    padding-left: 10px;
+    /* Estos elementos tendrán un relleno de 10px en la izquierda */
+}
+
+.m_navegacion {
+    background-color: brown;
+    /* Color gris claro */
+    list-style-position: inside;
+    /* Los marcadores de lista de estos elementos se colocarán dentro del contenido del elemento de lista */
+    margin: 10px;
+    /* Estos elementos tendrán un margen de 10px en todos los lados */
+
+    padding: 10px 20px;
+    /* Estos elementos tendrán un relleno de 10px arriba y abajo 20px derecha e izquierda*/
+    border-radius: 10px;
+}
+
+
+/*Imágenes que sirven de items a la lista no ordenada*/
+#mit_home {
+    list-style-image: url(../images/home.png);
+
+    /* Los elementos con la clase .mit_home tendrán una imagen home.png marcador de lista */
+}
+
+#mit_groups {
+    list-style-image: url(../images/groups.png);
+    /* Los elementos con la clase .mit_groups tendrán una imagen groups.png como marcador de lista */
+}
+
+#mit_contact {
+    list-style-image: url(../images/contact.png);
+    /* Los elementos con la clase .mit_contact tendrán una imagen contact.png como marcador de lista */
+}
+
+#mit_libro {
+    list-style-image: url(../images/libros.png);
+    /* Los elementos con la clase .mit_libro tendrán una imagen de libro.png como marcador de lista */
+    padding-bottom: 20px;
+    /* Los elementos con la clase .mit_libro tendrán un relleno de 20px en la parte inferior */
+}
+
+
+.m_intermedio>li>a:hover {
+    background-color: black;
+    /* Cuando se pasa el cursor sobre los enlaces directamente dentro de los elementos de lista en .m_intermedio, su peso de fuente cambiará a 900 */
+}
+
+.m_intermedio .m_claro>li {
+    background-color: #d3d3d3;
+
+    /* Los elementos de lista directamente dentro de .m_claro que están dentro de .m_intermedio tendrán marcadores de lista en minúsculas latinas */
+}
+
+/*******************Principal************************/
+.cuerpo {
+    display: flex;
+    /* El cuerpo usará un diseño flexible para organizar sus elementos hijos */
+    margin: 20px;
+    /* El cuerpo tendrá un margen de 20px en todos los lados */
+}
+
+.principal {
+    flex-grow: 1;
+    /* El contenido principal crecerá para ocupar todo el espacio extra en su contenedor padre */
+    margin-left: 10px;
+    /* El contenido principal tendrá un margen de 10px en la izquierda */
+    text-align: center;
+    /*Alineamos el texto al centro dentro del elemento que lo contiene, en este caso la clase seccion*/
+}
+
+.seccion {
+    background-color: #8b0000;
+    /* Color rojizo de fondo*/
+    color: #FFF;
+    /* El color del texto en las secciones será blanco */
+    border-radius: 10px;
+    /* Las esquinas de las secciones serán redondeadas con un radio de 10px */
+    padding: 20px;
+    /* Las secciones tendrán un relleno de 20px en todos los lados */
+    box-shadow: 0 4px 4px #000;
+
+    /* Las secciones tendrán una sombra de caja negra que se desplazará 4px hacia abajo y tendrá un desenfoque de 4px */
+    h4 {
+
+        text-align: center;
+        /*Alineamos el texto al centro dentro del elemento que lo contiene, en este caso la clase seccion*/
+        margin: 0px 100px 0px 0px;
+        /*La propiedad "margin" se utiliza para establecer el espacio de un elemento,en este caso de 0px arriba, 100px derecha, 0px abajo y  0px izquierda*/
+    }
+}
+
+.buscar {
+    width: fit-content;
+    /* El formulario de búsqueda tendrá un ancho que se ajustará a su contenido */
+    background-color: #ff4500;
+    /* Color rojo brillante */
+
+}
+
+.formulario {
+    background-color: #551B87;
+    display: inline-block;
+    margin: 10px;
+
+}
+
+
+
+.tablaSeccionUno {
+    color: white;
+    border-collapse: collapse;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    border: white 1px solid;
+
+    th {
+        border: white 1px solid;
+        padding: 10px;
+        background-color: #27335C;
+    }
+
+    td {
+        border: white 1px solid;
+        padding: 10px;
+        background-color: #3E4970;
+    }
+
+    a {
+        color: #03b8ff;
+    }
+}
+
+.tablaSeccionDos {
+    color: white;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 60px 50px 30px 700px;
+
+    th {
+        border: white 1px solid;
+        padding: 10px;
+        background-color: #27335C;
+    }
+
+    td {
+        border: white 1px solid;
+
+        padding: 10px;
+        background-color: #3E4970;
+    }
+
+    img {
+        width: 15%;
+        height: 15%;
+
+    }
+
+}
+
+.textoSeccion {
+    text-align: left;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.textoNegrita {
+    font-weight: bold;
+}
+
+.imagenSeccion {
+    float: left;
+    margin: 70px 50px 210px 20px;
+
+    order: 1;
+    /* Logo a la izquierda */
+}
+
+.principal> :not(:first-child) {
+    margin-top: 10px;
+    /*La propiedad "margin-top" se utiliza para establecer el espacio en la parte superior de un elemento*/
+}
+
+/* Todos los elementos en .principal que no sean el primer hijo tendrán un margen de 10px en la parte superior */
+
+
+.cuerpo_publicacion>img {
+
+    display: block;
+    /* La imagen en el cuerpo de la publicación se mostrará como un bloque */
+    margin: 0 20px 20px 0;
+    /* La imagen tendrá un margen de 0 en la parte superior, de 20px en la derecha, de 20px en la parte inferior y de 0 en la izquierda */
+    align-self: flex-start;
+    /* La imagen se alineará al principio del eje transversal */
+    border-radius: 10px;
+    /* Las esquinas de la imagen serán redondeadas con un radio de 10px */
+}
+
+.cuerpo_publicacion .t_borde_blanco {
+    margin-top: 0;
+    /* La tabla en el cuerpo de la publicación tendrá un margen de 0 en la parte superior */
+    text-align: center;
+    /* El texto en la tabla estará centrado */
+}
+
+/**************************pie**************************/
+
+.pie label {
+    display: block;
+    /* La etiqueta en el pie de página se mostrará como un bloque */
+    margin-bottom: 20px;
+    /* La etiqueta tendrá un margen de 20px en la parte inferior */
+    margin-left: 7px;
+    /* La etiqueta tendrá un margen de 7px en la izquierda */
+}
+
+input,
+button {
+    border-radius: 5px;
+    /* Los campos de entrada y los botones tendrán esquinas redondeadas con un radio de 5px */
+    line-height: 25px;
+    /* Los campos de entrada y los botones tendrán una altura de línea de 25px */
+    display: inline-block;
+    /* Los campos de entrada y los botones se mostrarán como bloques en línea */
+    margin: 0 7px;
+    /* Los campos de entrada y los botones tendrán un margen de 0 en la parte superior e inferior y de 7px en la izquierda y la derecha */
+}
+
+button {
+
+    padding: 0 10px;
+    /* Los botones tendrán un relleno de 0 en la parte superior e inferior y de 10px en la izquierda y la derecha */
+    background-color: #ff4500;
+    /* Color rojo brillante */
+    color: #FFF;
+    /* El color del texto en los botones será blanco */
+    border: 1px outset #FFF;
+    /* Los botones tendrán un borde de 1px de ancho, de estilo outset y de color blanco */
+}
+
+button:hover {
+    background-color: #ddadba
+        /*Tono rosa cuando se pasa el ratón*/
+}
+
+.pie>* {
+    margin: 0 40px;
+    /* Todos los elementos directamente dentro del pie de página tendrán un margen de 0 en la parte superior e inferior y de 40px en la izquierda y la derecha */
+    align-self: center;
+    /* Todos los elementos directamente dentro del pie de página se alinearán al centro del eje transversal */
+}
+
+.pie>form {
+    flex-grow: 1;
+    /* El formulario en el pie de página crecerá para ocupar todo el espacio extra en su contenedor padre */
+}
+
+.caja_footer {
+    margin: 20px 40px 10px 70px;
+    /*La propiedad "margin" se utiliza para establecer el espacio de un elemento,en este caso de 20px arriba, 40px derecha, 10px abajo y  70px izquierda*/
+    background-color: #696969;
+    /*Le damos color al contenedor*/
+    padding: 20px;
+    /*establecer el espacio entre el borde de un elemento y su contenido, en este caso de 20px en todas direcciones*/
+    border-radius: 10px;
+    /** Redondeamos las esquinas del contenedor con un radio de 10px */
+    max-width: 150px;
+    /*Establecemos el ancho máximo de 150px*/
+
+    a {
+        color: #03b8ff;
+        /*Le damos color al elemento a que esté dentro de la clase caja_footer*/
+    }
+
+    img {
+        width: 10%;
+        /*Establecemos el ancho de la imagenque esté dentro de la clase caja_footer */
+
+    }
+
+}

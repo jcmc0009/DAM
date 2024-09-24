@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. Mª José Grande Navarro -->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<xs:element name="expedientes">
+ <xs:complexType>
+   <xs:sequence>
+        <xs:element ref="expediente" maxOccurs="unbounded"/>
+   </xs:sequence>    
+ </xs:complexType>
+</xs:element>
+
+<xs:element name="expediente">
+  <xs:complexType>
+    <xs:sequence>
+        <xs:element ref="dni"/>
+        <xs:element ref="paciente"/>
+        <xs:element ref="domicilio"/>
+        <xs:element ref="motivo_ingreso"/>
+        <xs:element ref="estado"/>
+        <xs:element name="edad" type="xs:positiveInteger"/>  <!-- Al poner positiveInteger, ya no hace falta poner una restricción -->
+        <xs:element name="fecha_ingreso" type="xs:date"/>
+        <xs:element name="datosAdicionales" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="pruebas_medicas" />  
+        <xs:element ref="recetas" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+           <!-- Definimos el atributo de expediente -->
+    <xs:attribute name="codigo_exp" use="required"> <!-- Tiene restricción: 4 letras y 6 dígitos-->
+       <xs:simpleType>
+           <xs:restriction base="xs:string">
+               <xs:length value="10"/>
+               <xs:pattern value="[A-Za-z]{4}[0-9]{6}"/>
+           </xs:restriction>
+       </xs:simpleType>
+    </xs:attribute>
+
+  </xs:complexType>
+</xs:element>
+  
+<xs:element name="dni">
+  <xs:simpleType>
+      <xs:restriction base="xs:string">
+           <xs:maxLength value="9"/>
+           <xs:pattern value="[0-9]{8}[A-Za-z]"/>
+      </xs:restriction>
+  </xs:simpleType>
+</xs:element>
+
+
+<xs:element name="paciente">
+ <xs:complexType>
+    <xs:sequence>
+        <xs:element name="nombre_paciente" type="xs:string"/>
+        <xs:element name="primer_apellido" type="xs:string"/>
+        <xs:element name="segundo_apellido" type="xs:string"/>
+    </xs:sequence>
+ </xs:complexType>
+</xs:element>
+
+<xs:element name="domicilio">
+   <xs:complexType>
+       <xs:sequence>
+            <xs:element name="calle" type="xs:string"/>
+            <xs:element name="numero" type="xs:positiveInteger"/>
+            <xs:element name="localidad" type="xs:string"/>
+            <xs:element name="provincia" type="xs:string"/>
+       </xs:sequence>
+   </xs:complexType>
+</xs:element>
+
+<xs:element name="motivo_ingreso">
+   <xs:simpleType>
+       <xs:restriction base="xs:string">
+            <xs:enumeration value="Urgencias"/>
+            <xs:enumeration value="Rutinario"/>
+       </xs:restriction>
+   </xs:simpleType>
+</xs:element>
+
+<xs:element name="estado">
+   <xs:simpleType>
+        <xs:restriction base="xs:string">
+              <xs:enumeration value="Ingresado"/>
+              <xs:enumeration value="Alta"/>
+              <xs:enumeration value="UCI"/>
+        </xs:restriction>
+   </xs:simpleType>
+</xs:element>
+
+
+<xs:element name="pruebas_medicas">
+   <xs:complexType>
+        <xs:sequence>
+         <xs:element ref="prueba_medica" minOccurs="1" maxOccurs="unbounded"/> <!-- Puede aparecer 1 o varias pruebas médicas -->
+        </xs:sequence>
+   </xs:complexType>
+</xs:element>
+
+<xs:element name="prueba_medica">
+    <xs:complexType>
+        <xs:sequence>
+           <xs:element ref="motivo_prueba"/>
+           <xs:element name="nombre_doctor" type="xs:string"/>
+           <xs:element name="fecha_prueba" type="xs:date"/>            
+        </xs:sequence>
+
+           <!-- Definimos el atributo de prueba médica -->
+        <xs:attribute name="codigo_pru" use="required">  
+              <xs:simpleType>
+                   <xs:restriction base="xs:string">    <!-- Obligatorio el atributo código con las letras PR y 4 dígitos -->
+                        <xs:length value="6"/>              <!-- IMPORTANTE: Tiene que aparecer siempre PR-->
+                        <xs:pattern value="PR[0-9]{4}"/> 
+                   </xs:restriction>
+              </xs:simpleType>
+        </xs:attribute>
+
+
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="motivo_prueba">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Rutina"/>
+            <xs:enumeration value="Diagnóstico"/>
+            <xs:enumeration value="Urgencia"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+
+<xs:element name="recetas">
+  <xs:complexType>
+      <xs:sequence>
+         <xs:element ref="receta" minOccurs="0" maxOccurs="unbounded"/> <!-- Puede aparecer ninguna o varias recetas -->
+      </xs:sequence>
+  </xs:complexType>   
+</xs:element>
+
+
+<xs:element name="receta">
+   <xs:complexType>
+       <xs:sequence>
+           <xs:element name="nombre_receta" type="xs:string"/>
+           <xs:element ref="precio"/>
+       </xs:sequence>
+   </xs:complexType>
+</xs:element>
+
+
+<xs:element name="precio">
+   <xs:complexType>
+       <xs:simpleContent>
+            <xs:extension base="xs:decimal">
+                 <xs:attribute name="moneda" type="xs:string" fixed="euros" use="required"/> <!-- El atributo moneda no tiene ninguna restricción
+                                                                                         Si es obligatorio que aparezca, y que aparezca con 
+                                                                                         la palabra euros -->
+            </xs:extension>
+       </xs:simpleContent>
+   </xs:complexType>
+</xs:element>
+
+
+</xs:schema> 
+
+
+
+ 
+
+
+  
+    

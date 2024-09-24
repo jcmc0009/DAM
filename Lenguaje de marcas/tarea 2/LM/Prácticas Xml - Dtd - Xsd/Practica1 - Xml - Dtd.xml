@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+
+<!--
+
+<!DOCTYPE pedido SYSTEM "practica1.dtd">
+--> 
+
+<!DOCTYPE pedido [
+
+<!ELEMENT pedido (nombre_cliente, articulos, direccion)>
+<!ELEMENT nombre_cliente (nombre, primer_apellido, segundo_apellido)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT primer_apellido (#PCDATA)>
+<!ELEMENT segundo_apellido (#PCDATA)>
+
+<!ELEMENT articulos (articulo)+>
+<!ELEMENT articulo (#PCDATA)>
+<!ATTLIST articulo cantidad CDATA #IMPLIED>
+
+<!ELEMENT direccion (calle, numero, portal, planta, codigo_postal,provincia)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT portal (#PCDATA)>
+<!ELEMENT planta (#PCDATA)>
+<!ELEMENT codigo_postal (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+]>    
+
+<pedido>
+	<nombre_cliente>
+		<nombre> Guillermo</nombre>
+		<primer_apellido>Linares</primer_apellido>
+		<segundo_apellido>Larrea</segundo_apellido>
+	</nombre_cliente>
+	<articulos>
+		<articulo cantidad="2">Pantalon</articulo>
+		<articulo cantidad="1">Camisa</articulo>
+		<articulo>Sudadera</articulo>
+		<articulo>Calcetines</articulo>
+	</articulos>
+	<direccion>
+		<calle>C/ Manuel Benitez el Cordobés</calle>
+		<numero>4</numero>
+		<portal>A</portal>
+		<planta>2</planta>
+		<codigo_postal>14005</codigo_postal>
+		<provincia>Cordoba</provincia>
+	</direccion>
+</pedido>

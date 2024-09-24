@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. Mª José Grande Navarro -->
+
+<expedientes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="Ejercicio3.xsd">
+
+
+         <expediente codigo_exp="EFGH654321"> <!-- Primer expediente: Contiene una prueba y ninguna receta -->
+            <dni>78543678Z</dni>
+            <paciente>
+                <nombre_paciente>Alejandro</nombre_paciente>
+                <primer_apellido>Pérez</primer_apellido>
+                <segundo_apellido>Grande</segundo_apellido> 
+            </paciente>
+            <domicilio> <!-- Puede aparecer en cualquier orden -->
+                <calle>Séneca</calle>
+                <numero>56</numero>
+                <localidad>Montoro</localidad>
+                <provincia>Córdoba</provincia>
+            </domicilio>
+    
+                <!-- Puede ser URGENCIA o RUTINARIO, y se puede poner como elemento o atributo -->
+            <motivo_ingreso>Rutinario</motivo_ingreso>
+    
+                <!-- Puede ser INGRESADO, ALTA o UCI y se puede poner como elemento o atributo --> 
+            <estado>Alta</estado>
+    
+                <!-- La edad tiene que ser mayor que cero -->
+            <edad>40</edad>
+    
+                 <!-- Si no ingresa, no tiene sentido, poner fecha del ingreso (No tiene mucho sentido) -->
+            <fecha_ingreso> 2023-05-03 </fecha_ingreso>
+           
+                 <!-- Es opcional, e.d, puede aparecer o no -->
+            <datosAdicionales></datosAdicionales>
+    
+            <pruebas_medicas> <!-- Obligatorio tiene que aparecer 1 prueba medica por lo menos -->
+    
+                        <!-- Obligatorio el atributo código con las letras PR y 4 dígitos -->
+                 <prueba_medica codigo_pru="PR5678">
+    
+                       <!-- Puede ser RUTINA, DIÁGNSOTICO o URGENCIA y se puede  poner como elemento o atributo -->
+                    <motivo_prueba>Rutina</motivo_prueba>
+    
+                    <nombre_doctor>Pilar Madrid González</nombre_doctor>
+                    <fecha_prueba>2023-05-10</fecha_prueba>
+                </prueba_medica>
+          
+            </pruebas_medicas>
+        </expediente>
+    
+      
+        <expediente codigo_exp="POUY974286">  <!-- Segundo expediente: Varias pruebas y una receta -->
+            <dni>89640654Z</dni>
+            <paciente>
+                <nombre_paciente>Antonio</nombre_paciente>
+                <primer_apellido>Paniagua</primer_apellido>
+                <segundo_apellido>Perez</segundo_apellido> 
+            </paciente>
+            <domicilio> <!-- Puede aparecer en cualquier orden -->
+                <calle>Sindica</calle>
+                <numero>67</numero>
+                <localidad>Tomares</localidad>
+                <provincia>Sevilla</provincia>
+            </domicilio>
+    
+                <!-- Puede ser URGENCIA o RUTINARIO, y se puede poner como elemento o atributo -->
+            <motivo_ingreso>Urgencias</motivo_ingreso>
+    
+                <!-- Puede ser INGRESADO, ALTA o UCI y se puede poner como elemento o atributo --> 
+            <estado>Ingresado</estado>
+    
+                <!-- La edad tiene que ser mayor que cero -->
+            <edad>56</edad>
+    
+                 <!-- Si no ingresa, no tiene sentido, poner fecha del ingreso (No tiene mucho sentido) -->
+            <fecha_ingreso>2023-03-10</fecha_ingreso>
+           
+                 <!-- Es opcional, e.d, puede aparecer o no -->
+            <datosAdicionales></datosAdicionales>
+    
+            <pruebas_medicas> <!-- Obligatorio tiene que aparecer 1 prueba medica por lo menos -->
+    
+                        <!-- Obligatorio el atributo código con las letras PR y 4 dígitos -->
+                 <prueba_medica codigo_pru="PR0987">
+    
+                       <!-- Puede ser RUTINA, DIÁGNSOTICO o URGENCIA y se puede  poner como elemento o atributo -->
+                    <motivo_prueba>Urgencia</motivo_prueba>
+    
+                    <nombre_doctor>Antonio Valero Jiménez</nombre_doctor>
+                    <fecha_prueba>2023-12-03</fecha_prueba>
+                </prueba_medica>
+    
+                <prueba_medica codigo_pru="PR7654">
+                    <motivo_prueba>Urgencia</motivo_prueba>
+                    <nombre_doctor>Manuel Quesada Fernández</nombre_doctor>
+                    <fecha_prueba>2023-05-15</fecha_prueba>
+                </prueba_medica>
+    
+            </pruebas_medicas>
+    
+            <recetas>  <!-- Puede que no haya ninguna receta -->
+    
+                  <receta>
+                    <nombre_receta>IIbuprofeno</nombre_receta>
+                    <precio moneda="euros">5</precio>
+                 </receta>
+    
+            </recetas>
+        </expediente>
+    
+    
+    
+    
+        <expediente codigo_exp="ABCD123456">  <!-- Tercer expediente: Varias pruebas y varias recetas -->
+            <dni>34359392B</dni>
+            <paciente>
+                <nombre_paciente>Pepe</nombre_paciente>
+                <primer_apellido>Sánchez</primer_apellido>
+                <segundo_apellido>García</segundo_apellido> 
+            </paciente>
+            <domicilio> <!-- Puede aparecer en cualquier orden -->
+                <calle>Cairuán</calle>
+                <numero>27</numero>
+                <localidad>Ecija</localidad>
+                <provincia>Córdoba</provincia>
+            </domicilio>
+    
+                <!-- Puede ser URGENCIA o RUTINARIO, y se puede poner como elemento o atributo -->
+            <motivo_ingreso>Urgencias</motivo_ingreso>
+    
+                <!-- Puede ser INGRESADO, ALTA o UCI y se puede poner como elemento o atributo --> 
+            <estado>UCI</estado>
+    
+                <!-- La edad tiene que ser mayor que cero -->
+            <edad>34</edad>
+    
+                 <!-- Si no ingresa, no tiene sentido, poner fecha del ingreso (No tiene mucho sentido) -->
+            <fecha_ingreso>2023-09-23</fecha_ingreso>
+           
+                 <!-- Es opcional, e.d, puede aparecer o no -->
+            <datosAdicionales></datosAdicionales>
+    
+            <pruebas_medicas> <!-- Obligatorio tiene que aparecer 1 prueba medica por lo menos -->
+    
+                        <!-- Obligatorio el atributo código con las letras PR y 4 dígitos -->
+                 <prueba_medica codigo_pru="PR1234">
+    
+                       <!-- Puede ser RUTINA, DIÁGNSOTICO o URGENCIA y se puede  poner como elemento o atributo -->
+                    <motivo_prueba>Rutina</motivo_prueba>
+    
+                    <nombre_doctor>Juan Pérez Navarro</nombre_doctor>
+                    <fecha_prueba>2023-09-25</fecha_prueba>
+                </prueba_medica>
+    
+                <prueba_medica codigo_pru="PR5678">
+                    <motivo_prueba>Diagnóstico</motivo_prueba>
+                    <nombre_doctor>Alejandro Ruiz Jiménez</nombre_doctor>
+                    <fecha_prueba>2023-09-24</fecha_prueba>
+                </prueba_medica>
+    
+            </pruebas_medicas>
+    
+            <recetas>  <!-- Puede que no haya ninguna receta -->
+    
+                <receta>
+                   <nombre_receta>Ibuprofeno</nombre_receta>
+                       <!-- Tiene que ser aparecer el precio en DECIMAL -->
+                   <precio moneda="euros">5.75</precio>
+                </receta>
+    
+                <receta>
+                    <nombre_receta>Paracetamol</nombre_receta>
+                    <precio moneda="euros">8.20</precio>
+                 </receta>
+    
+            </recetas>
+        </expediente>
+    
+    </expedientes>

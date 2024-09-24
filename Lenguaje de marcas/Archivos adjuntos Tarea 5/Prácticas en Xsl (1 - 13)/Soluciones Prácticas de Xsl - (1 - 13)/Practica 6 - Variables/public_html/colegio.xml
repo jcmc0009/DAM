@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="Practica6.xsl"?>
+
+<colegio>
+   <nombre> Cervantes</nombre>
+   <telefono> 957897456</telefono>
+   <curso nivel="1" etapa="ESO">
+      <grupo orden="A">
+          <alumno codigo="342">
+             <nombre>Ana</nombre>
+             <apellidos>Abad Álvarez</apellidos>
+             <anno_nac>2018</anno_nac>
+             <nota_media>6.5</nota_media>
+          </alumno>
+        </grupo>
+       <grupo orden="B">
+         <alumno codigo="534">
+            <nombre>Alejando</nombre>
+            <apellidos>Álvarez Amate</apellidos>
+            <anno_nac>2004</anno_nac>
+            <nota_media>5.25</nota_media>
+         </alumno>
+        </grupo>
+    </curso>
+    <curso nivel="2" etapa="ESO">
+      <grupo orden="A">
+        <alumno codigo="211">
+           <nombre>Carmen</nombre>
+           <apellidos>Casado Carmona</apellidos>
+           <anno_nac>2018</anno_nac>
+           <nota_media>4</nota_media>
+        </alumno>
+      </grupo>
+    </curso>
+</colegio>

@@ -1,0 +1,69 @@
+<!-- This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. Mª José Grande Navarro -->
+
+<!ELEMENT expedientes  (expediente)*>
+
+<!ELEMENT expediente (dni, paciente, domicilio, motivo_ingreso, estado, edad, fecha_ingreso, datosAdicionales?, pruebas_medicas+, recetas*)>
+        <!-- Indicamos el atributo de expediente -->
+<!ATTLIST expediente codigo_exp ID #REQUIRED>
+
+<!ELEMENT dni (#PCDATA)>
+
+<!ELEMENT paciente (nombre_paciente, primer_apellido, segundo_apellido)>
+<!ELEMENT nombre_paciente (#PCDATA)>
+<!ELEMENT primer_apellido (#PCDATA)>
+<!ELEMENT segundo_apellido (#PCDATA)>
+
+<!ELEMENT domicilio (calle, numero, localidad, provincia)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT provincia (#PCDATA)>
+ 
+    <!-- El MOTIVO DE INGRESO o puede ser  URGENCIA o RUTINARIO, pero en un DTD, no se puede dar a elegir entre estas dos opciones, a no ser 
+         que se declare como atributo -->
+<!ELEMENT motivo_ingreso (#PCDATA)>
+
+        <!-- Si se hubiese declarado como atributo de paciente, en el DTD se especificaría de esta forma:
+  
+              <!ATTLIST paciente motivo_ingreso (Urgencias|Rutinario) #REQUIRED>   -->
+
+
+              <!-- El ESTADO puede ser  INGRESADO, ALTA o UCI, pero en un DTD, no se puede dar a elegir entre estas dos opciones, a no ser 
+         que se declare como atributo -->
+<!ELEMENT estado (#PCDATA)>
+
+<!-- Si se hubiese declarado como atributo de paciente, en el DTD se especificaría de esta forma:
+
+      <!ATTLIST paciente estado (Ingresado|Alta|UCI) #REQUIRED>   -->
+              
+<!ELEMENT edad (#PCDATA)>
+
+<!ELEMENT fecha_ingreso (#PCDATA)>
+
+<!ELEMENT datosAdicionales (#PCDATA)>
+
+
+<!ELEMENT pruebas_medicas (prueba_medica+)>
+
+<!ELEMENT prueba_medica (motivo_prueba, nombre_doctor, fecha_prueba)>
+          <!-- Indicamos el atributo de pruebas medicas -->
+     <!ATTLIST prueba_medica codigo_pru ID #REQUIRED>
+
+             <!-- El motivo puede ser  RUTINA, DIÁGNSOTICO o URGENCIA, pero en un DTD, no se puede dar a elegir entre estas dos opciones, a no ser 
+         que se declare como atributo -->
+         <!ELEMENT motivo_prueba (#PCDATA)>
+
+         <!-- Si se hubiese declarado como atributo de prueba medica, en el DTD se especificaría de esta forma:
+   
+               <!ATTLIST prueba_medica motivo (Rutina|Diágnostico|Urgencia) #REQUIRED>   -->
+
+<!ELEMENT nombre_doctor (#PCDATA)>
+<!ELEMENT fecha_prueba (#PCDATA)>
+
+
+<!ELEMENT recetas (receta*)>
+
+<!ELEMENT receta (nombre_receta, precio)>
+<!ELEMENT nombre_receta (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+    <!ATTLIST precio moneda CDATA #FIXED "euros">

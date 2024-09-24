@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<universidad id="AB-123" tipo="pública">
+    <informacion> 
+          <nombre> Universidad de Córdoba</nombre>
+          <url>http:www.uco.es</url>
+          <telefono> 957 435687</telefono>
+          <direccion>
+              <via> Avda. Menéndez Pidal</via> 
+              <numero> 8 </numero>
+              <codigo_postal> 14011</codigo_postal>
+              <provincia> Córdoba</provincia>
+          </direccion>
+    </informacion>
+
+    <grados> 
+          <grado cod_grado="GINF">
+               <nombre> Grado en Ingeniería Informática</nombre>
+               <numero_creditos> 420 </numero_creditos>
+               <numero_cursos> 4 </numero_cursos>
+               <nota_corte> 10.2 </nota_corte>
+               <numero_plazas> 120 </numero_plazas>
+               <numero_asignaturas> 24 </numero_asignaturas>
+           </grado>
+           
+           <grado cod_grado="GPSI">
+               <nombre> Grado en Psicología</nombre>
+               <numero_creditos> 390 </numero_creditos>
+               <numero_cursos> 4 </numero_cursos>
+               <nota_corte> 8 </nota_corte>
+               <numero_plazas > 80 </numero_plazas>
+               <numero_asignaturas> 20 </numero_asignaturas>
+           </grado> 
+
+           <grado cod_grado="GBIOL">
+               <nombre> Grado en Biología</nombre>
+              <numero_creditos> 240 </numero_creditos>
+               <numero_cursos> 4 </numero_cursos>
+               <nota_corte> 9.5 </nota_corte>
+              <numero_plazas> 200 </numero_plazas>
+               <numero_asignaturas> 27 </numero_asignaturas>
+           </grado>
+       </grados>  
+
+       <asignaturas>
+                     <!-- HAY CINCO ASIGNATURAS DE INFORMÁTICA -->
+                     
+            <asignatura ref="GINF" cod_asignatura="PROG" curso="1" turno="mañana"> 
+                 <nombre> Programación</nombre>
+                 <numero_creditos> 4 </numero_creditos>
+                 <nombre_profesor cod_profesor="JAC"> Juan Antonio Castro</nombre_profesor>
+            </asignatura>  
+            <asignatura ref="GINF" cod_asignatura="CALC" curso="1" turno="tarde"> 
+                <nombre> Cálculo</nombre>
+                <numero_creditos> 8 </numero_creditos>
+                <nombre_profesor cod_profesor="JCN"> Jesús Caldera Navarro</nombre_profesor>
+            </asignatura>     
+            <asignatura ref="GINF" cod_asignatura="SIST" curso="2" turno="mañana"> 
+                <nombre> Sistemas Digitales</nombre>
+                <numero_creditos> 7  </numero_creditos>
+                <nombre_profesor cod_profesor="JAC"> Juan Antonio Castro</nombre_profesor>
+            </asignatura>  
+            <asignatura ref="GINF" cod_asignatura="SOPE" curso="1" turno="tarde"> 
+                <nombre> Sistemas Operativos</nombre>
+                <numero_creditos> 12 </numero_creditos>
+                <nombre_profesor cod_profesor="JCN"> Jesús Caldera Navarro</nombre_profesor>
+            </asignatura>     
+            <asignatura ref="GINF" cod_asignatura="ARQU" curso="3" turno="mañana"> 
+                <nombre> Arquitectura de Computadores</nombre>
+                <numero_creditos> 7  </numero_creditos>
+                <nombre_profesor cod_profesor="JAC"> Juan Antonio Castro</nombre_profesor>
+            </asignatura> 
+               
+                   <!-- HAY TRES ASIGNATURAS DE PSICOLOGÍA  -->
+                   
+            <asignatura ref="GPSI" cod_asignatura="NEUR" curso="2" turno="mañana"> 
+                <nombre> Neuropsicología </nombre>
+                <numero_creditos> 9 </numero_creditos>
+                <nombre_profesor cod_profesor="CPM"> Carmen Peña Matas</nombre_profesor>
+            </asignatura>      
+            <asignatura ref="GPSI" cod_asignatura="FISI" curso="1" turno="mañana"> 
+                <nombre> Fisiología</nombre>
+                <numero_creditos> 7 </numero_creditos>
+                <nombre_profesor cod_profesor="FCR"> Francisca Castillejo Rodríguez</nombre_profesor>
+            </asignatura> 
+            <asignatura ref="GPSI" cod_asignatura="METO" curso="3" turno="tarde"> 
+                <nombre> Metodología Experimental</nombre>
+                <numero_creditos> 6 </numero_creditos>
+                <nombre_profesor ccod_profesor="CPM"> Carmen Peña Matas</nombre_profesor>
+            </asignatura>     
+
+                             <!-- HAY CUATRO ASIGNATURAS DE BIOLOGÍA  -->
+
+            <asignatura ref="GBIOL" cod_asignatura="BIOL" curso="1" turno="tarde"> 
+                <nombre> Biología Celular</nombre>
+                <numero_creditos> 12 </numero_creditos>
+                <nombre_profesor cod_profesor="MVE"> María Vergara</nombre_profesor>
+            </asignatura>  
+            <asignatura ref="GBIOL" cod_asignatura="BIOQ" curso="3" turno="tarde"> 
+               <nombre> Bioquímica </nombre>
+               <numero_creditos> 9 </numero_creditos>
+               <nombre_profesor cod_profesor="AFE"> Antonio Fernández </nombre_profesor>
+           </asignatura>     
+           <asignatura ref="GBIOL" cod_asignatura="BOTA" curso="4" turno="mañana"> 
+               <nombre> Botánica </nombre>
+               <numero_creditos> 11  </numero_creditos>
+               <nombre_profesor cod_profesor="MVE"> María Vergara</nombre_profesor>
+           </asignatura>   
+           <asignatura ref="GBIOL" cod_asignatura="ZOOL" curso="1" turno="tarde"> 
+             <nombre> Zoología </nombre>
+             <numero_creditos> 8 </numero_creditos>
+             <nombre_profesor cod_profesor="MVE"> María Vergara</nombre_profesor>
+         </asignatura>     
+            
+            
+</asignaturas>               
+             
+    <alumnos>  
+    
+               
+            <alumno ref="PROG" dni="12345678-P">  
+                 <profesor ref="JAC"/>
+                 <nombre> Jesús Pérez </nombre>                
+                 <precio_matricula> 160 €</precio_matricula>
+            </alumno>
+
+            <alumno ref="SIST" dni="12345678-P">  
+                 <profesor ref="JAC"/>
+                 <nombre> Jesús Pérez  </nombre>                
+                 <precio_matricula> 350 €</precio_matricula>
+            </alumno>
+            
+            <alumno ref="CALC" dni="76543787-Z">  
+                <profesor ref="JCN"/>
+                <nombre> Juan Medina</nombre>
+                <apellidos> </apellidos>                        
+                 <precio_matricula> 250 €</precio_matricula>
+           </alumno>
+
+           <alumno ref="SIST" dni="30987004-R">  
+              <profesor ref="JAC"/>
+              <nombre> Amelia Rizos </nombre>                     
+              <precio_matricula> 300 €</precio_matricula>
+          </alumno>
+          
+            <alumno ref="ARQU" dni="30987004-R">  
+              <profesor ref="JAC"/>
+              <nombre> Amelia Rizos </nombre>                     
+              <precio_matricula> 250 €</precio_matricula>
+          </alumno>
+
+          <alumno ref="PROG" dni="12345678-P">  
+            <profesor ref="JAC"/>
+            <nombre> Omar Gutiérrez </nombre>         
+            <precio_matricula> 340 €</precio_matricula>
+       </alumno>
+
+       <alumno ref="ARQU" dni="76543787-Z">  
+           <profesor ref="JAC"/>
+           <nombre> Alejandro Corona</nombre>    
+           <telefono> 657890543</telefono>             
+             <precio_matricula> 220 €</precio_matricula>
+      </alumno>
+
+      <alumno ref="SOPE" dni="30987004-R">  
+         <profesor ref="JCN"/>
+         <nombre> Antonio Rafael Blanco  </nombre>       
+         <precio_matricula> 210 €</precio_matricula>
+     </alumno>
+
+     <alumno ref="ARQU" dni="76543787-Z">   
+        <profesor ref="JAC"/>
+        <nombre> Juan Medina </nombre>
+        <apellidos> </apellidos>           
+          <precio_matricula> 170 €</precio_matricula>
+     </alumno>
+
+   <alumno ref="CALC" dni="30987004-R">    
+      <profesor ref="JCN"/>
+      <nombre> Marcos Hidalgo  </nombre>              
+      <precio_matricula> 150 €</precio_matricula>
+  </alumno>
+  
+  <alumno ref="SOPE" dni="76543787-Z">  
+        <profesor ref="JAC"/>
+        <nombre> Juan Medina</nombre>
+        <precio_matricula> 170 €</precio_matricula>
+     </alumno>
+  
+   <alumno ref="FISI" dni="12345678-Z">  
+        <profesor ref="FCR"/>
+        <nombre> Lucía Ortiz</nombre>
+        <precio_matricula> 150 €</precio_matricula>
+     </alumno>
+     
+     <alumno ref="METO" dni="89765432-Z">  
+        <profesor ref="CPM"/>
+        <nombre> Lucía Ortiz</nombre>
+        <precio_matricula> 130 €</precio_matricula>
+     </alumno>
+     
+     <alumno ref="FISI" dni="56790034-L">  
+        <profesor ref="FCR"/>
+        <nombre> Juan Antonio Peralbo</nombre>
+        <precio_matricula> 130 €</precio_matricula>
+     </alumno>
+     
+     <alumno ref="METO" dni="66773907-P">  
+        <profesor ref="CPM"/>
+        <nombre> Inmaculada Herrera</nombre>
+        <precio_matricula> 100 €</precio_matricula>
+     </alumno>
+     
+      <alumno ref="NEUR" dni="22334567-D">  
+        <profesor ref="CPM"/>
+        <nombre> Juan Antonio Peralbo</nombre>
+        <precio_matricula> 130 €</precio_matricula>
+     </alumno>
+     
+        <alumno ref="METO" dni="66773907-P">  
+        <profesor ref="CPM"/>
+        <nombre> Jimena Quesada</nombre>
+        <precio_matricula> 100 €</precio_matricula>
+     </alumno>
+  
+      <alumno ref="BIOL" dni="33490875-A">  
+        <profesor ref="MVE"/>
+        <nombre>  Alfonso Jiménez</nombre>
+        <precio_matricula> 150 €</precio_matricula>
+     </alumno>
+     
+        <alumno ref="BIOL" dni="66773907-P">  
+        <profesor ref="MVE"/>
+        <nombre> María Dolores Cabrera</nombre>
+        <precio_matricula> 150 €</precio_matricula>
+     </alumno>
+     
+      <alumno ref="NEUR" dni="33490875-A">  
+        <profesor ref="CPM"/>
+        <nombre>  Alfonso Jiménez</nombre>
+        <precio_matricula> 130 €</precio_matricula>
+     </alumno>
+     
+        <alumno ref="BOTA" dni="98667554-P">  
+        <profesor ref="MVE"/>
+        <nombre> Eva Nieto</nombre>
+        <precio_matricula> 100 €</precio_matricula>
+     </alumno>
+     
+     <alumno ref="ZOOL" dni="33490875-A">  
+        <profesor ref="MVE"/>
+        <nombre>  Alfonso Jiménez</nombre>
+        <precio_matricula> 130 €</precio_matricula>
+     </alumno>
+     
+        <alumno ref="ZOOL" dni="98667554-P">  
+        <profesor ref="MVE"/>
+        <nombre> Eva Nieto</nombre>
+        <precio_matricula> 100 €</precio_matricula>
+     </alumno>
+        
+    <alumno ref="BIOQ" dni="98667554-P">  
+        <profesor ref="AFE"/>
+        <nombre> Eva Nieto</nombre>
+        <precio_matricula> 100 €</precio_matricula>
+     </alumno>
+      
+        
+          
+</alumnos>  
+
+</universidad>
+  
+       

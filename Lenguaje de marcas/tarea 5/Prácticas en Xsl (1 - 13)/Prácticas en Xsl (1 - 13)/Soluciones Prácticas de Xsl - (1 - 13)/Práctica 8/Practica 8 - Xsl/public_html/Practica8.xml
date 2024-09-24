@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="Practica8.xsl"?>
+
+<estudiantes>  
+       
+    <estudiante nunmatri = "393"> 
+        <nombre>Alejandro</nombre>
+        <apellido>López</apellido> 
+        <nick>alopez</nick> 
+        <calificacion>8.5</calificacion> 
+    </estudiante>     
+    
+     <estudiante nunmatri = "493"> 
+         <nombre>Vanesa</nombre> 
+        <apellido>García</apellido> 
+        <nick>vgarcia</nick> 
+        <calificacion>9.5</calificacion> 
+    </estudiante>   
+      
+    <estudiante nunmatri = "593"> 
+       <nombre>Javier</nombre> 
+       <apellido>Sánchez</apellido> 
+       <nick>jsanchez</nick> 
+       <calificacion>9.0</calificacion> 
+    </estudiante>    
+       
+</estudiantes>

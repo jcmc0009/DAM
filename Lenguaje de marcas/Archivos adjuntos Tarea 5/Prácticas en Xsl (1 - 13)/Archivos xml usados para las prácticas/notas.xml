@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="Practica9.xsl"?>
+
+<alumnos>
+    <alumno>
+        <nombre>José Luís</nombre>
+        <nota>5</nota>
+        <nota>8</nota>
+        <nota>10</nota>
+    </alumno>
+    <alumno>
+        <nombre>Pilar</nombre>
+        <nota>4</nota>
+        <nota>8</nota>
+    </alumno>
+    <alumno>
+        <nombre>Quique</nombre>
+        <nota>10</nota>
+        <nota>6</nota>
+        <nota>9</nota>
+    </alumno>
+</alumnos>

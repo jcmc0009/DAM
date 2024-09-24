@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE expedientes>
+<!-- El documento ha sido estructurado agrupando cuando sea posible los elementos, como por ejemplo
+datos del paciente(nombre,apellidos, domicilio, edad, motivo del ingreso...), pruebaas médicas y recetas
+y recetas-->
+<expedientes>
+    <expediente codigo_expediente="abcd123456">
+        <datos_paciente dni="12345678A">
+            <datos_generales>
+                <nombre>Javier</nombre>
+                <apellidos>
+                    <primer_apellido>Romero</primer_apellido>
+                    <segundo_apelido>Canela</segundo_apelido>
+                </apellidos>
+                <domicilio>
+                    <via>Calle</via>
+                    <nombre_Via>Sagunto</nombre_Via>
+                    <numero>99</numero>
+                    <provincia>Jaen</provincia>
+                    <localidad>Linares</localidad>
+                    <codigo_Postal>23700</codigo_Postal>
+                </domicilio>
+                <edad>33</edad>
+            </datos_generales>
+            <motivo_ingreso motivo_visita="urgencias"></motivo_ingreso>
+            <estado_paciente estado_llegada="UCI"></estado_paciente>
+            <fecha_ingreso>02-05-2023</fecha_ingreso>
+            <datos_adicionales>
+                <dato>Paciente alérgico a la penicilina</dato>
+            </datos_adicionales>
+        </datos_paciente>
+        <pruebas_medicas>
+            <prueba codigo_prueba="PR1234">
+                <motivo>Urgencia</motivo>
+                <doctor_solicitante>
+                    <nombre>Caramelo</nombre>
+                    <apellidos>
+                        <primer_apellido>Canela</primer_apellido>
+                        <segundo_apelido>Vainilla</segundo_apelido>
+                    </apellidos>
+                </doctor_solicitante>
+                <fecha_realizacion>03-05-2023</fecha_realizacion>
+            </prueba>
+        </pruebas_medicas>
+        <recetas>
+            <receta>
+                <nombre>
+
+                </nombre>
+                <precio moneda="€">10.5</precio>
+            </receta>
+        </recetas>
+    </expediente>
+</expedientes>

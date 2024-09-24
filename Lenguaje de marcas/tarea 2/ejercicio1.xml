@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE expedientes>
+<!-- El documento ha sido estructurado agrupando cuando sea posible los elementos, como por ejemplo
+datos del paciente(nombre,apellidos, domicilio, edad, motivo del ingreso...), pruebas médicas y
+recetas, hay elementos que pueden no estar presentes o estar mas de 1 vez como receta , o datos
+adicionales que tiene el elemento dato, u
+otros elementos que solo contienen atributos como motivo prueba -->
+<expedientes>
+    <!-- Inicio primer expediente.Estructura reutilizable -->
+    <expediente codigo_expediente="abcd123456">
+        <!-- el atributo codigo_expediente, identificar uniquivamente el expediente, está compuesto
+        por 4 letras y 6 números, será de caracácter único y no debe repetirse -->
+        <datos_paciente dni="12345678A">
+            <!-- el atributo dni está compuesto por 8 dígitos y una letra  -->
+            <datos_generales>
+                <nombre>Javier</nombre>
+                <apellidos>
+                    <primer_apellido>Carrasco</primer_apellido>
+                    <segundo_apellido>Gonzalez</segundo_apellido>
+                </apellidos>
+                <domicilio>
+                    <via>Calle</via>
+                    <nombre_via>Sagunto</nombre_via>
+                    <numero>99</numero>
+                    <!--  Se validará que sea mayor que 0 -->
+                    <provincia>Jaen</provincia>
+                    <localidad>Linares</localidad>
+                    <codigo_postal>23700</codigo_postal>
+                    <!--  Se validará que sea un número compuesto por que 5 dígitos -->
+                </domicilio>
+                <edad>33</edad>
+            </datos_generales>
+            <motivo_ingreso motivo_visita="urgencias"></motivo_ingreso>
+            <!--  Se validará que sea vacío el elemento motivo_ingreso, y que el atributo
+            motivo_visita sólo pueda tener los valores urgencias o rutinario  -->
+            <estado_paciente estado_llegada="uci"></estado_paciente>
+            <!--  Se validará que sea vacío el elemento estado_paciente, y que el atributo
+            estado_llegada sólo pueda tener los valores ingresado o alta o uci  -->
+            <fecha_ingreso>2023-05-22</fecha_ingreso>
+            <!-- Formato fecha año-mes-día  -->
+            <!-- el campo datos_adicionales debe estar presente, pero puede ir vacío como es el
+            siguiente caso, ya que para este paciente no hay dato adicional, o presentar mas de un elemento
+            llamado dato-->
+            <datos_adicionales></datos_adicionales>
+        </datos_paciente>
+        <pruebas_medicas>
+            <prueba codigo_prueba="PR1234">
+                <!-- se validará que el elemento prueba pueda estar vacío, o contener diversas
+                pruebas , y que codigo_prueba esté compuesto por 2 letras y 4 números-->
+                <motivo_prueba codigo_motivo="urgencia"></motivo_prueba>
+                <!--  Se validará que sea vacío el elemento motivo_prueba, y que el atributo
+            codigo_motivo sólo pueda tener los valores rutina o urgencia o diagnostico  -->
+                <doctor_solicitante>
+                    <nombre>Caramelo</nombre>
+                    <apellidos>
+                        <primer_apellido>Canela</primer_apellido>
+                        <segundo_apellido>Gonzalez</segundo_apellido>
+                    </apellidos>
+                </doctor_solicitante>
+                <fecha_realizacion>2023-05-28</fecha_realizacion>
+                  <!-- Formato fecha año-mes-día  -->
+            </prueba>
+        </pruebas_medicas>
+        <!-- el campo recetas debe estar presente, pero puede ir vacío como es el
+            siguiente caso, ya que para este paciente no hay ninguna receta.  o presentar mas de un elemento
+            llamado receta-->
+        <recetas></recetas>
+    </expediente>
+    <!-- Fin primer expediente.Estructura reutilizable -->
+    <!-- Inicio segundo expediente.Estructura reutilizable -->
+    <expediente codigo_expediente="efgh123456">
+        <datos_paciente dni="62345678A">
+            <datos_generales>
+                <nombre>Manolo</nombre>
+                <apellidos>
+                    <primer_apellido>Simpson</primer_apellido>
+                    <segundo_apellido>Taberna</segundo_apellido>
+                </apellidos>
+                <domicilio>
+                    <via>Calle</via>
+                    <nombre_via>Ciudad de linares</nombre_via>
+                    <numero>33</numero>
+                    <provincia>Jaen</provincia>
+                    <localidad>Jabalquinto</localidad>
+                    <codigo_postal>23733</codigo_postal>
+                </domicilio>
+                <edad>55</edad>
+            </datos_generales>
+            <motivo_ingreso motivo_visita="rutinario"></motivo_ingreso>
+            <estado_paciente estado_llegada="alta"></estado_paciente>
+            <fecha_ingreso>2023-10-11</fecha_ingreso>
+            <datos_adicionales>
+                <dato>Paciente alérgico al marisco</dato>
+            </datos_adicionales>
+        </datos_paciente>
+        <pruebas_medicas>
+            <prueba codigo_prueba="PR1234">
+                <motivo_prueba codigo_motivo="urgencia"></motivo_prueba>
+                <doctor_solicitante>
+                    <nombre>Caramelo</nombre>
+                    <apellidos>
+                        <primer_apellido>Canela</primer_apellido>
+                        <segundo_apellido>Vainilla</segundo_apellido>
+                    </apellidos>
+                </doctor_solicitante>
+                <fecha_realizacion>2024-10-15</fecha_realizacion>
+            </prueba>
+            <prueba codigo_prueba="ZZ1234">
+                <motivo_prueba codigo_motivo="rutina"></motivo_prueba>
+                <doctor_solicitante>
+                    <nombre>Chocolate</nombre>
+                    <apellidos>
+                        <primer_apellido>Amargo</primer_apellido>
+                        <segundo_apellido>Vainilla</segundo_apellido>
+                    </apellidos>
+                </doctor_solicitante>
+                <fecha_realizacion>2024-10-16</fecha_realizacion>
+            </prueba>
+            <prueba codigo_prueba="TT1234">
+                <motivo_prueba codigo_motivo="diagnostico"></motivo_prueba>
+                <doctor_solicitante>
+                    <nombre>Dell</nombre>
+                    <apellidos>
+                        <primer_apellido>Teclado</primer_apellido>
+                        <segundo_apellido>Raton</segundo_apellido>
+                    </apellidos>
+                </doctor_solicitante>
+                <fecha_realizacion>2024-10-16</fecha_realizacion>
+            </prueba>
+        </pruebas_medicas>
+        <recetas>
+            <receta>
+                <nombre>Receta </nombre>
+                <precio moneda="€">10.5</precio>
+            </receta>
+        </recetas>
+    </expediente>
+    <!-- Fin segundo expediente.Estructura reutilizable -->
+    <!-- Inicio tercer expediente.Estructura reutilizable -->
+    <expediente codigo_expediente="ijkl123456">
+        <datos_paciente dni="62345678A">
+            <datos_generales>
+                <nombre>Lucia</nombre>
+                <apellidos>
+                    <primer_apellido>Sims</primer_apellido>
+                    <segundo_apellido>Vader</segundo_apellido>
+                </apellidos>
+                <domicilio>
+                    <via>Calle</via>
+                    <nombre_via>Beas de segura</nombre_via>
+                    <numero>33</numero>
+                    <provincia>Jaen</provincia>
+                    <localidad>Villanueva del arzobispo</localidad>
+                    <codigo_postal>23722</codigo_postal>
+                </domicilio>
+                <edad>22</edad>
+            </datos_generales>
+            <motivo_ingreso motivo_visita="urgencias"></motivo_ingreso>
+            <estado_paciente estado_llegada="uci"></estado_paciente>
+            <fecha_ingreso>2023-11-11</fecha_ingreso>
+            <datos_adicionales>
+                <dato>Paciente alérgico al marisco</dato>
+                <dato>Paciente manifiesta tener hambre todo el tiempo</dato>
+            </datos_adicionales>
+        </datos_paciente>
+        <pruebas_medicas>
+            <prueba codigo_prueba="HH1234">
+                <motivo_prueba codigo_motivo="urgencia"></motivo_prueba>
+                <doctor_solicitante>
+                    <nombre>Homer</nombre>
+                    <apellidos>
+                        <primer_apellido>Duff</primer_apellido>
+                        <segundo_apellido>Vainilla</segundo_apellido>
+                    </apellidos>
+                </doctor_solicitante>
+                <fecha_realizacion>2023-10-11</fecha_realizacion>
+            </prueba>
+            <prueba codigo_prueba="ZZ1234">
+                <motivo_prueba codigo_motivo="rutina"></motivo_prueba>
+                <doctor_solicitante>
+                    <nombre>Ana</nombre>
+                    <apellidos>
+                        <primer_apellido>Garcia</primer_apellido>
+                        <segundo_apellido>Garcia</segundo_apellido>
+                    </apellidos>
+                </doctor_solicitante>
+                <fecha_realizacion>2023-10-19</fecha_realizacion>
+            </prueba>
+            <prueba codigo_prueba="kk1234">
+                <motivo_prueba codigo_motivo="urgencia"></motivo_prueba>
+                <doctor_solicitante>
+                    <nombre>Lenovo</nombre>
+                    <apellidos>
+                        <primer_apellido>Fuente</primer_apellido>
+                        <segundo_apellido>Papel</segundo_apellido>
+                    </apellidos>
+                </doctor_solicitante>
+                <fecha_realizacion>2023-12-11</fecha_realizacion>
+            </prueba>
+        </pruebas_medicas>
+        <recetas>
+            <receta>
+                <nombre>Receta</nombre>
+                <precio moneda="€">10.5</precio>
+            </receta>
+            <receta>
+                <nombre>Pastilla efervescente</nombre>
+                <precio moneda="€">22.5</precio>
+            </receta>
+            <receta>
+                <nombre>Analgésico</nombre>
+                <precio moneda="€">10.5</precio>
+            </receta>
+        </recetas>
+    </expediente>
+    <!-- Fin tercer expediente.Estructura reutilizable -->
+</expedientes>

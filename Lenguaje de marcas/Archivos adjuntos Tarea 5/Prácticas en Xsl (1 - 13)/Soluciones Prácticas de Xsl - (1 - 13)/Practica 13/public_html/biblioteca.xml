@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="Practica13.xsl"?>
+
+<bib url="http://www.uco.es/servicios/biblioteca/">
+    <libro año="2014">
+        <titulo>TCP/IP Ilustrado</titulo>
+        <autor>
+            <apellido>Stevens</apellido>
+            <nombre>W.</nombre>
+        </autor>
+        <editorial>Addison-Wesley</editorial>
+        <precio>65.95</precio>
+    </libro>
+    <libro año="1992">
+        <titulo>Programación Avanzada para Entornos UNIX</titulo>
+        <autor>
+            <apellido>Stevens</apellido>
+            <nombre>W.</nombre>
+        </autor>
+        <editorial>Addison-Wesley</editorial>
+        <precio>65.95</precio>
+    </libro>
+    <libro año="2000">
+        <titulo>Datos en la Web</titulo>
+        <autor>
+            <apellido>Abiteboul</apellido>
+            <nombre>Serge</nombre>
+        </autor>
+        <autor>
+            <apellido>Buneman</apellido>
+            <nombre>Peter</nombre>
+        </autor>
+        <autor>
+            <apellido>Suciu</apellido>
+            <nombre>Dan</nombre>
+        </autor>
+        <editorial>Morgan Kaufmann editorials</editorial>
+        <precio>39.95</precio>
+    </libro>
+    <libro año="1999">
+        <titulo>Tecnología Económica para la Televisión Digital</titulo>
+        <editor>
+            <apellido>Gerbarg</apellido>
+            <nombre>Darcy</nombre>
+            <afiliacion>CITI</afiliacion>
+        </editor>
+        <editorial>Kluwer Academic editorials</editorial>
+        <precio>129.95</precio>
+    </libro>
+</bib>

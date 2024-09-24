@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento. Define que este documento es HTML5 -->
+<html> <!-- Elemento raíz del documento HTML -->
+<head> <!-- Contiene metadatos/información sobre el documento -->
+    <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres para el documento -->
+    <title>Formulario HTML</title> <!-- Título que se muestra en la barra del navegador -->
+</head>
+<body> <!-- Contiene el contenido principal del documento HTML -->
+<h2>FORMULARIO</h2>
+
+<form> <!-- Crea un formulario -->
+    <!-- Caja de texto para texto corto -->
+    <label for="textoCorto">Texto corto:</label><br> <!-- Etiqueta para el campo de texto corto -->
+    <input type="text" id="textoCorto" name="textoCorto"><br> <!-- Campo de texto corto -->
+
+    <!-- Caja de texto para texto largo -->
+    <label for="textoLargo">Texto largo:</label><br> <!-- Etiqueta para el campo de texto largo -->
+    <textarea id="textoLargo" name="textoLargo"></textarea><br> <!-- Campo de texto largo -->
+
+    <!-- Menú desplegable con una lista de tres opciones -->
+    <label for="opciones">Opciones:</label><br> <!-- Etiqueta para el menú desplegable -->
+    <select id="opciones" name="opciones"> <!-- Menú desplegable -->
+        <option value="opcion1">Opción 1</option> <!-- Opción 1 del menú desplegable -->
+        <option value="opcion2">Opción 2</option> <!-- Opción 2 del menú desplegable -->
+        <option value="opcion3">Opción 3</option> <!-- Opción 3 del menú desplegable -->
+    </select><br>
+
+    <!-- Tres casillas de verificación en una lista -->
+    <label for="casillas">Casillas:</label><br> <!-- Etiqueta para las casillas de verificación -->
+    <input type="checkbox" id="casilla1" name="casilla1" value="Casilla 1"> <!-- Casilla de verificación 1 -->
+    <label for="casilla1"> Casilla 1</label><br> <!-- Etiqueta para la casilla de verificación 1 -->
+    <input type="checkbox" id="casilla2" name="casilla2" value="Casilla 2"> <!-- Casilla de verificación 2 -->
+    <label for="casilla2"> Casilla 2</label><br> <!-- Etiqueta para la casilla de verificación 2 -->
+    <input type="checkbox" id="casilla3" name="casilla3" value="Casilla 3"> <!-- Casilla de verificación 3 -->
+    <label for="casilla3"> Casilla 3</label><br> <!-- Etiqueta para la casilla de verificación 3 -->
+
+    <!-- Botón de envío -->
+    <input type="submit" value="Enviar"> <!-- Botón de envío del formulario -->
+</form> <!-- Fin del formulario -->
+
+</body> <!-- Fin del contenido principal del documento HTML -->
+</html> <!-- Fin del documento HTTML -->

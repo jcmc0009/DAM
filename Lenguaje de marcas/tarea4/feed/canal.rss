@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <!-- compatibilidad con atom
+     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+-->
+
+  <!--CANAL
+  DE NOTICIAS-->
+  <channel>
+    <!--Elementos
+    obligatorios: title, link y description-->
+    <!--Elementos
+    opcionales: language, copyright, managingEditor, webMaster, pubDate, 
+      lastBuildDate, category, generator, docs, cloud, ttl, image, textInput, skipHours, 
+      skipDays-->
+
+    <!-- compatibilidad con atom
+    <atom:link href="http://www.noticias.com/rss.xml" rel="self"
+      type="application/rss+xml" />
+    -->
+
+    <title>Canal de noticias</title>
+    <link>http://www.noticias.com</link>
+    <description>Con este canal tendrás todas las noticias de Linares al momento</description>
+    <language>es</language>
+    <pubDate>Wed, 10 Jan 2024 11:22:06 GMT</pubDate>
+    <managingEditor>editor@aytocordoba.com (editor)</managingEditor>
+    <image>
+      <url>https:/www.eldiario.es/imagenPrueba.jpg </url>
+      <title>Noticias a mogollón</title>
+      <link>https:/www.eldiario.es</link>
+    </image>
+    <copyright>Creative Common</copyright>
+    <category>Cultura</category>
+    <category>Oposiciones</category>
+    <category>Sede Electrónica</category>
+    <ttl>60</ttl>
+    <!--LISTADO
+    DE NOTICIAS-->
+    <!--1º
+    Noticia-->
+    <item>
+      <!--Elementos
+      obligatorios: title o description-->
+      <!--Elementos
+      opcionales: title o descripcion, link, author, category, ,comments, 
+        enclosure, guid, pubDate, source, -->
+      <title>Noticia 1</title>
+      <description>Ejemplo de noticia, hoy en Linares ha hecho buen tiempo</description>
+      <link>https://www.aytocordoba.com/feed/</link>
+      <guid>https://www.aytocordoba.com/feed/noticia1</guid>
+      <source url="https://www.aytocordoba.com/feed/">Feed ayuntamiento de Córdoba</source>
+      <author>jc0.1@hotmail.com (Autor noticia)</author>
+      <category>Cultura</category>
+      <pubDate>Wed, 10 Jan 2024 11:22:06 GMT</pubDate>
+    </item>
+
+    <!--2º
+    Noticia-->
+    <item>
+      <!--Elementos
+      obligatorios: title o description-->
+      <!--Elementos
+      opcionales: title o descripcion, link, author, category, ,comments, 
+        enclosure, guid, pubDate, source, -->
+      <title>Noticia 2</title>
+      <description>Ejemplo de noticia, hoy voy a comer lentejas con chorizo</description>
+      <link>https://www.aytocordoba.com/feed/</link>
+      <guid>https://www.aytocordoba.com/feed/noticia2</guid>
+      <author>jc0.1@hotmail.com (Autor noticia)</author>
+      <category>Oposiciones</category>
+      <pubDate>thu, 11 Jan 2024 11:22:06 GMT</pubDate>
+    </item>
+
+    <!--3º
+    Noticia-->
+    <item>
+      <!--Elementos
+      obligatorios: title o description-->
+      <!--Elementos
+      opcionales: title o descripcion, link, author, category, ,comments, 
+        enclosure, guid, pubDate, source, -->
+      <title>Noticia 3</title>
+      <description>Hoy es el día de Andalucía, felicidades a a todos los andaluces</description>
+      <link>https://www.aytocordoba.com/feed/</link>
+      <guid>https://www.aytocordoba.com/feed/noticia3</guid>
+      <author>jc0.1@hotmail.com (Autor noticia)</author>
+      <category>Oposiciones</category>
+      <pubDate>fri, 12 Jan 2024 11:22:06 GMT</pubDate>
+    </item>
+
+  </channel>
+</rss>
+
+<!-- Más información
+https://validator.w3.org/feed/docs/rss2.html
+https://cyber.harvard.edu/rss/rss.html
+-->

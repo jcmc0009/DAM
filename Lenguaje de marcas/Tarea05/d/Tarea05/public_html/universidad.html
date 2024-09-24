@@ -1,0 +1,289 @@
+<html>
+    <header>
+        <img src="img/logo.png">
+        <h1> INFORMACI&Oacute;N DE LA UNIVERSIDAD</h1>
+        <h3> Datos de la Universidad</h3>
+    </header>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Taread de XSL</title>
+        <link rel="stylesheet" href="css/estilos.css">
+    </head>
+    <body>
+        <div class="apartado1">
+            <h3> 1. Crear una lista ordenada por el n&uacute;mero de  cr&eacute;ditos de menor a mayor, de
+                        todos los grados, con toda su informaci&oacute;n. </h3>
+            <ol>
+                <li>
+                    <p>El nombre del grado :  Universidad de C&oacute;rdoba --  240  cr&eacute;ditos.-- 4 --cursos--NOTA CORTE: ( 9.5 )-- 200  plazas--N&uacute;mero de asignaturas: ## 27 ##</p>
+                </li>
+                <li>
+                    <p>El nombre del grado :  Universidad de C&oacute;rdoba --  390  cr&eacute;ditos.-- 4 --cursos--NOTA CORTE: ( 8 )-- 80  plazas--N&uacute;mero de asignaturas: ## 20 ##</p>
+                </li>
+                <li>
+                    <p>El nombre del grado :  Universidad de C&oacute;rdoba --  420  cr&eacute;ditos.-- 4 --cursos--NOTA CORTE: ( 10.2 )-- 120  plazas--N&uacute;mero de asignaturas: ## 24 ##</p>
+                </li>
+            </ol>
+        </div>
+        <div class="apartado2">
+            <h3>  2. Mostrar el n&uacute;mero total de grados que existen en la Universidad de C&oacute;rdoba, al igual que 
+                        mostrar el n&uacute;m&eacute;ro total de asignaturas, as&iacute; c&oacute;mo el n&uacute;mero total de alumnos matriculados en la Universidad de C&oacute;rdoba.
+                        Adem&aacute;s, ten&eacute;is que mostrar el n&uacute;mero total de plazas existentes en la Universidad de C&oacute;rdoba y
+                        la nota media de corte de los tres grados. Reflejar el resultado, acompa&ntilde;ado del texto correspodiente
+                        a su informaci&oacute;n: Ejemplo: N&Uacute;MERO TOTAL DE GRADOS: 3.  </h3>
+            <p>N&uacute;mero total de grados: 3</p>
+            <p>N&uacute;mero total de asignaturas: 12</p>
+            <p>N&uacute;mero total de alumnos 24</p>
+            <p>N&uacute;mero total de plazas existentes: 400</p>
+            <p>Nota media de corte de los 3 grados: 9.23</p>
+        </div>
+        <div class="apartado3">
+            <h3>  3. Generar una tabla en .html, donde se muestre el nombre de todas las asignaturas del Grado 
+                        de Inform&aacute;tica y de Psicolog&iacute;a. Adem&aacute;s, se debe mostrar el nombre del grado al que pertenece cada asignatura. 
+                        Seguidamente se mostrar&aacute;, si la asignatura se imparte por la tarde o por la ma&ntilde;ana, as&iacute; como, el correspondiente
+                        n&uacute;mero de cr&eacute;ditos de esa asignatura. En la &uacute;ltima columna, se mostrar&aacute; el n&uacute;mero de alumnos, matriculados
+                        en cada asignatura. 
+                    </h3>
+            <table border="1">
+                <tr>
+                    <th> Asignaturas inform&aacute;tica</th><th> Nombre del grado </th><th> Turno </th><th> N&uacute;mero cr&eacute;ditos de la asignatura </th><th> N&uacute;mero de alumnos matriculados </th>
+                </tr>
+                <tr>
+                    <td> Programaci&oacute;n</td><td> Grado en Ingenier&iacute;a Inform&aacute;tica</td><td style="background-color: green;">ma&ntilde;ana</td><td align="center"><span style="color:red"> 4 </span></td><td align="center">2</td>
+                </tr>
+                <tr>
+                    <td> C&aacute;lculo</td><td> Grado en Ingenier&iacute;a Inform&aacute;tica</td><td style="background-color: orange;">tarde</td><td align="center"><span style="color:green"> 8 </span></td><td align="center">2</td>
+                </tr>
+                <tr>
+                    <td> Sistemas Digitales</td><td> Grado en Ingenier&iacute;a Inform&aacute;tica</td><td style="background-color: green;">ma&ntilde;ana</td><td align="center"><span style="color:green"> 7  </span></td><td align="center">2</td>
+                </tr>
+                <tr>
+                    <td> Sistemas Operativos</td><td> Grado en Ingenier&iacute;a Inform&aacute;tica</td><td style="background-color: orange;">tarde</td><td align="center"><span style="color:blue"> 12 </span></td><td align="center">2</td>
+                </tr>
+                <tr>
+                    <td> Arquitectura de Computadores</td><td> Grado en Ingenier&iacute;a Inform&aacute;tica</td><td style="background-color: green;">ma&ntilde;ana</td><td align="center"><span style="color:green"> 7  </span></td><td align="center">3</td>
+                </tr>
+                <tr>
+                    <td> Neuropsicolog&iacute;a </td><td> Grado en Psicolog&iacute;a</td><td style="background-color: green;">ma&ntilde;ana</td><td align="center"><span style="color:green"> 9 </span></td><td align="center">2</td>
+                </tr>
+                <tr>
+                    <td> Fisiolog&iacute;a</td><td> Grado en Psicolog&iacute;a</td><td style="background-color: green;">ma&ntilde;ana</td><td align="center"><span style="color:green"> 7 </span></td><td align="center">2</td>
+                </tr>
+                <tr>
+                    <td> Metodolog&iacute;a Experimental</td><td> Grado en Psicolog&iacute;a</td><td style="background-color: orange;">tarde</td><td align="center"><span style="color:green"> 6 </span></td><td align="center">3</td>
+                </tr>
+            </table>
+        </div>
+        <div class="apartado4">
+            <h3> 4. Generar una tabla en .html, donde se muestre el nombre el nombre del grado, el 
+                        n&uacute;mero de asignaturas de cada grado y la suma total de cr&eacute;ditos que existen para las asignaturas
+                        de cada grado. </h3>
+            <table border="1">
+                <tr>
+                    <th> Nombre del grado</th><th> N&uacute;mero de asignaturas </th><th> Suma total de cr&eacute;ditos </th>
+                </tr>
+                <tr>
+                    <td> Grado en Ingenier&iacute;a Inform&aacute;tica</td><td align="center">5</td><td align="center">38</td>
+                </tr>
+                <tr>
+                    <td> Grado en Psicolog&iacute;a</td><td align="center">3</td><td align="center">22</td>
+                </tr>
+                <tr>
+                    <td> Grado en Biolog&iacute;a</td><td align="center">4</td><td align="center">40</td>
+                </tr>
+            </table>
+        </div>
+        <div class="apartado5">
+            <h3> 5. Mostrar un resumen, donde se refleje un listado con el nombre de los alumnos matriculados
+                        en cada asignatura. Adem&aacute;s se debe de mostrar, el n&uacute;mero de cr&eacute;ditos de esa asignatura, el n&uacute;mero de curso 
+                        y el nombre del profesor que imparte esa asignatura. El formato en el que debe de quedar, aplicandole 
+                        hojas de estilo, es tal y como se muestra en la siguiente imagen:
+                    </h3>
+            <div class="resumen">
+                <section class="bloque">
+                    <p>Asignatura  Programaci&oacute;n</p>
+                    <p>
+                        <ol>
+                            <h5>
+                                <u>ALUMNOS MATRICULADOS: </u>
+                            </h5>
+                            <li> Jes&uacute;s P&eacute;rez </li>
+                            <li> Omar Guti&eacute;rrez </li>
+                        </ol>
+                    </p>
+                    <p>N&uacute;mero de cr&eacute;ditos  4 </p>
+                    <p>N&uacute;mero de curso 1</p>
+                    <p>N&oacute;mbre del profesor  Juan Antonio Castro</p>
+                </section>
+                <section class="bloque">
+                    <p>Asignatura  C&aacute;lculo</p>
+                    <p>
+                        <ol>
+                            <h5>
+                                <u>ALUMNOS MATRICULADOS: </u>
+                            </h5>
+                            <li> Juan Medina</li>
+                            <li> Marcos Hidalgo  </li>
+                        </ol>
+                    </p>
+                    <p>N&uacute;mero de cr&eacute;ditos  8 </p>
+                    <p>N&uacute;mero de curso 1</p>
+                    <p>N&oacute;mbre del profesor  Jes&uacute;s Caldera Navarro</p>
+                </section>
+                <section class="bloque">
+                    <p>Asignatura  Sistemas Digitales</p>
+                    <p>
+                        <ol>
+                            <h5>
+                                <u>ALUMNOS MATRICULADOS: </u>
+                            </h5>
+                            <li> Jes&uacute;s P&eacute;rez  </li>
+                            <li> Amelia Rizos </li>
+                        </ol>
+                    </p>
+                    <p>N&uacute;mero de cr&eacute;ditos  7  </p>
+                    <p>N&uacute;mero de curso 2</p>
+                    <p>N&oacute;mbre del profesor  Juan Antonio Castro</p>
+                </section>
+                <section class="bloque">
+                    <p>Asignatura  Sistemas Operativos</p>
+                    <p>
+                        <ol>
+                            <h5>
+                                <u>ALUMNOS MATRICULADOS: </u>
+                            </h5>
+                            <li> Antonio Rafael Blanco  </li>
+                            <li> Juan Medina</li>
+                        </ol>
+                    </p>
+                    <p>N&uacute;mero de cr&eacute;ditos  12 </p>
+                    <p>N&uacute;mero de curso 1</p>
+                    <p>N&oacute;mbre del profesor  Jes&uacute;s Caldera Navarro</p>
+                </section>
+                <section class="bloque">
+                    <p>Asignatura  Arquitectura de Computadores</p>
+                    <p>
+                        <ol>
+                            <h5>
+                                <u>ALUMNOS MATRICULADOS: </u>
+                            </h5>
+                            <li> Amelia Rizos </li>
+                            <li> Alejandro Corona</li>
+                            <li> Juan Medina </li>
+                        </ol>
+                    </p>
+                    <p>N&uacute;mero de cr&eacute;ditos  7  </p>
+                    <p>N&uacute;mero de curso 3</p>
+                    <p>N&oacute;mbre del profesor  Juan Antonio Castro</p>
+                </section>
+                <section class="bloque">
+                    <p>Asignatura  Neuropsicolog&iacute;a </p>
+                    <p>
+                        <ol>
+                            <h5>
+                                <u>ALUMNOS MATRICULADOS: </u>
+                            </h5>
+                            <li> Juan Antonio Peralbo</li>
+                            <li>  Alfonso Jim&eacute;nez</li>
+                        </ol>
+                    </p>
+                    <p>N&uacute;mero de cr&eacute;ditos  9 </p>
+                    <p>N&uacute;mero de curso 2</p>
+                    <p>N&oacute;mbre del profesor  Carmen Pe&ntilde;a Matas</p>
+                </section>
+                <section class="bloque">
+                    <p>Asignatura  Fisiolog&iacute;a</p>
+                    <p>
+                        <ol>
+                            <h5>
+                                <u>ALUMNOS MATRICULADOS: </u>
+                            </h5>
+                            <li> Luc&iacute;a Ortiz</li>
+                            <li> Juan Antonio Peralbo</li>
+                        </ol>
+                    </p>
+                    <p>N&uacute;mero de cr&eacute;ditos  7 </p>
+                    <p>N&uacute;mero de curso 1</p>
+                    <p>N&oacute;mbre del profesor  Francisca Castillejo Rodr&iacute;guez</p>
+                </section>
+                <section class="bloque">
+                    <p>Asignatura  Metodolog&iacute;a Experimental</p>
+                    <p>
+                        <ol>
+                            <h5>
+                                <u>ALUMNOS MATRICULADOS: </u>
+                            </h5>
+                            <li> Luc&iacute;a Ortiz</li>
+                            <li> Inmaculada Herrera</li>
+                            <li> Jimena Quesada</li>
+                        </ol>
+                    </p>
+                    <p>N&uacute;mero de cr&eacute;ditos  6 </p>
+                    <p>N&uacute;mero de curso 3</p>
+                    <p>N&oacute;mbre del profesor  Carmen Pe&ntilde;a Matas</p>
+                </section>
+                <section class="bloque">
+                    <p>Asignatura  Biolog&iacute;a Celular</p>
+                    <p>
+                        <ol>
+                            <h5>
+                                <u>ALUMNOS MATRICULADOS: </u>
+                            </h5>
+                            <li>  Alfonso Jim&eacute;nez</li>
+                            <li> Mar&iacute;a Dolores Cabrera</li>
+                        </ol>
+                    </p>
+                    <p>N&uacute;mero de cr&eacute;ditos  12 </p>
+                    <p>N&uacute;mero de curso 1</p>
+                    <p>N&oacute;mbre del profesor  Mar&iacute;a Vergara</p>
+                </section>
+                <section class="bloque">
+                    <p>Asignatura  Bioqu&iacute;mica </p>
+                    <p>
+                        <ol>
+                            <h5>
+                                <u>ALUMNOS MATRICULADOS: </u>
+                            </h5>
+                            <li> Eva Nieto</li>
+                        </ol>
+                    </p>
+                    <p>N&uacute;mero de cr&eacute;ditos  9 </p>
+                    <p>N&uacute;mero de curso 3</p>
+                    <p>N&oacute;mbre del profesor  Antonio Fern&aacute;ndez </p>
+                </section>
+                <section class="bloque">
+                    <p>Asignatura  Bot&aacute;nica </p>
+                    <p>
+                        <ol>
+                            <h5>
+                                <u>ALUMNOS MATRICULADOS: </u>
+                            </h5>
+                            <li> Eva Nieto</li>
+                        </ol>
+                    </p>
+                    <p>N&uacute;mero de cr&eacute;ditos  11  </p>
+                    <p>N&uacute;mero de curso 4</p>
+                    <p>N&oacute;mbre del profesor  Mar&iacute;a Vergara</p>
+                </section>
+                <section class="bloque">
+                    <p>Asignatura  Zoolog&iacute;a </p>
+                    <p>
+                        <ol>
+                            <h5>
+                                <u>ALUMNOS MATRICULADOS: </u>
+                            </h5>
+                            <li>  Alfonso Jim&eacute;nez</li>
+                            <li> Eva Nieto</li>
+                        </ol>
+                    </p>
+                    <p>N&uacute;mero de cr&eacute;ditos  8 </p>
+                    <p>N&uacute;mero de curso 1</p>
+                    <p>N&oacute;mbre del profesor  Mar&iacute;a Vergara</p>
+                </section>
+            </div>
+        </div>
+    </body>
+    <footer>
+                Jos&eacute; Carlos Manj&oacute;n Carrasco
+            </footer>
+</html>

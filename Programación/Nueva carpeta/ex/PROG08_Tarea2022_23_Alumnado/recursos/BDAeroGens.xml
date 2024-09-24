@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><list>
+  <Ejercicio3.AeroGenerador>
+    <numSerie>1</numSerie>
+    <fechaInstalacion>2023-04-09</fechaInstalacion>
+    <funcionando>false</funcionando>
+    
+    <kwTotales>0.0</kwTotales>
+    <horasTotales>0</horasTotales>
+    <kwFuncionamientoActual>0.0</kwFuncionamientoActual>
+    <horasFuncionamientoActual>0</horasFuncionamientoActual>
+    <horasUltimoFuncinamiento>0</horasUltimoFuncinamiento>
+    <kwGeneradosUltimoFuncionamiento>0.0</kwGeneradosUltimoFuncionamiento>
+  <color>Blanco</color></Ejercicio3.AeroGenerador>
+  <Ejercicio3.AeroGenerador>
+    <numSerie>2</numSerie>
+    <fechaInstalacion>2023-04-09</fechaInstalacion>
+    <funcionando>false</funcionando>
+    
+    <kwTotales>0.0</kwTotales>
+    <horasTotales>0</horasTotales>
+    <kwFuncionamientoActual>0.0</kwFuncionamientoActual>
+    <horasFuncionamientoActual>0</horasFuncionamientoActual>
+    <horasUltimoFuncinamiento>0</horasUltimoFuncinamiento>
+    <kwGeneradosUltimoFuncionamiento>0.0</kwGeneradosUltimoFuncionamiento>
+  <color>Blanco</color></Ejercicio3.AeroGenerador>
+  <Ejercicio3.AeroGenerador>
+    <numSerie>3</numSerie>
+    <fechaInstalacion>2023-04-09</fechaInstalacion>
+    <funcionando>false</funcionando>
+    
+    <kwTotales>0.0</kwTotales>
+    <horasTotales>0</horasTotales>
+    <kwFuncionamientoActual>0.0</kwFuncionamientoActual>
+    <horasFuncionamientoActual>0</horasFuncionamientoActual>
+    <horasUltimoFuncinamiento>0</horasUltimoFuncinamiento>
+    <kwGeneradosUltimoFuncionamiento>0.0</kwGeneradosUltimoFuncionamiento>
+  <color>Blanco</color></Ejercicio3.AeroGenerador>
+</list>

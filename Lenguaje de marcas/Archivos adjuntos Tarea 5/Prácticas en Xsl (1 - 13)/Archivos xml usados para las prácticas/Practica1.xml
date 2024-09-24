@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="Practica1.xsl"?>
+
+<pelicula>
+    <titulo> Superman  3  </titulo>
+    <descripcion> Extraterrestre con poderes, que se dedica a salvar personas. </descripcion>
+</pelicula>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="Practica4.xsl"?>
+
+<catalogo>
+    <cd>
+        <titulo>Empire Burlesque</titulo>
+        <artista>Bob Dylan</artista>
+        <pais>USA</pais>
+        <discografica>Columbia</discografica>
+        <precio>10.90</precio>
+        <anio>1985</anio>
+    </cd>
+    
+    <cd>
+        <titulo>The dock of the bay</titulo>
+        <artista>Otis Redding</artista>
+        <pais>USA</pais>
+        <discografica>Atlantic</discografica>
+        <precio>7.90</precio>
+        <anio>1987</anio>
+    </cd>
+    <cd>
+        <titulo>Picture book</titulo>
+        <artista>Simply Red</artista>
+        <pais>EU</pais>
+        <discografica>Elektra</discografica>
+        <precio>7.20</precio>
+        <anio>1985</anio>
+    </cd>
+    <cd>
+        <titulo>Red</titulo>
+        <artista>The Communards</artista>
+        <pais>UK</pais>
+        <discografica>London</discografica>
+        <precio>7.80</precio>
+        <anio>1987</anio>
+    </cd>
+    <cd>
+        <titulo>Unchain my heart</titulo>
+        <artista>Joe Cocker</artista>
+        <pais>USA</pais>
+        <discografica>EMI</discografica>
+        <precio>8.20</precio>
+        <anio>1987</anio>
+    </cd>
+ </catalogo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Realizar el correspondiente .xsd, teniendo en cuenta que el sexo, SÓLO puede ser,
+    u Hombre o Mujer -->
+
+
+<persona xmlns:xsi="http://w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="Persona.xsd">
+
+
+         <nombre>Juan</nombre>
+         <apellido>León</apellido>
+         <sexo>Hombre</sexo>
+ 
+        
+</persona>
+
+
+
+
+        
+  

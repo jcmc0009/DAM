@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<pizzas xmlns:xsi="http://w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="Pizzas.xsd">
+
+         pizzas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ejercicio15.xsd">
+     <pizza nombre="Barbacoa" precio="8">
+         <ingrediente nombre="Salsa Barbacoa"/>
+         <ingrediente nombre="Mozzarella"/>
+         <ingrediente nombre="Pollo"/>
+         <ingrediente nombre="Bacon"/>
+         <ingrediente nombre="Ternera"/>
+     </pizza>
+     <pizza nombre="Margarita" precio="6">
+         <ingrediente nombre="Tomate"/>
+         <ingrediente nombre="Jamón"/>
+         <ingrediente nombre="Queso"/>
+     </pizza>
+
+
+
+</pizzas>
+
+
+
+        
+  

@@ -1,0 +1,63 @@
+<!ELEMENT expedientes (expediente+) ><!-- DEclaración del elemento reservas que es el nodo raíz , ese signo  + indica que al menos debe
+estar presente un elemento expediente-->
+<!ATTLIST expediente codigo_expediente CDATA #REQUIRED> <!--declaración
+del atributo asociados al elemento expediente, que sea CDATA es que es una cadena de texto, y
+required indica que debe estar presente -->
+<!ELEMENT expediente (datos_paciente,pruebas_medicas+,recetas)><!--Declaración
+elemento no terminal expediente, compuesto por datos_paciente,pruebas_medicas(tiene que estar
+presente al menos una vez) y recetas -->
+<!ELEMENT datos_paciente (datos_generales,motivo_ingreso,estado_paciente,fecha_ingreso,datos_adicionales)>
+<!--Declaración
+elemento no terminal datos_paciente, compuesto por
+datos_generales,motivo_ingreso,estado_paciente,fecha_ingreso y datos_adicionales -->
+<!ATTLIST datos_paciente dni NMTOKEN #REQUIRED><!--declaración
+    del atributo asociados al elemento datos_paciente, dni que sea NMTOKEN  indica que el atributo sólo
+contiene letras, dígitos, y los caracteres punto ".", guión "-",
+subrayado "_" y dos puntos ":", se ha puesto de esta forma por ser mas restrictivo ,que CDATA -->
+<!ELEMENT datos_generales (nombre, apellidos, domicilio, edad)>
+<!ELEMENT nombre (#PCDATA)><!-- Declaración elemento terminal nombre, #PCDATA- indica que el elemento no puede contener
+elementos, sólo cadena caracteres-->
+<!ELEMENT apellidos (primer_apellido,segundo_apellido)><!-- Declaración elemento no terminal apellidos,compuesto por primer_apellido y segundo_apellido-->
+<!ELEMENT primer_apellido (#PCDATA)><!-- Declaración elemento terminal primer_apellido-->
+<!ELEMENT segundo_apellido (#PCDATA)><!-- Declaración elemento terminal segundo_apellido-->
+<!ELEMENT edad (#PCDATA)><!-- Declaración elemento terminal edad-->
+<!ELEMENT domicilio (via,nombre_via,numero,provincia,localidad,codigo_postal)><!--Declaración
+    elemento no terminal domicilio, compuesto por
+    via,nombre_via,numero,provincia,localidad y codigo_postal -->
+<!ELEMENT via (#PCDATA)><!-- Declaración elemento terminal via-->
+<!ELEMENT nombre_via (#PCDATA)><!-- Declaración elemento terminal nombre_via-->
+<!ELEMENT numero (#PCDATA)><!-- Declaración elemento terminal numero-->
+<!ELEMENT provincia (#PCDATA)><!-- Declaración elemento terminal provincia-->
+<!ELEMENT localidad (#PCDATA)><!-- Declaración elemento terminal localidad-->
+<!ELEMENT codigo_postal (#PCDATA)><!-- Declaración elemento terminal codigo_postal-->
+<!ELEMENT pruebas_medicas (prueba+)><!-- Declaración elementno no terminal, ese signo + indica que al menos debe haber un elemento hijo
+llamado prueba-->
+<!ELEMENT prueba (motivo_prueba,doctor_solicitante,fecha_realizacion)><!-- Declaración elemento no terminal prueba,compuesto por
+motivo_prueba,doctor_solicitante y fecha_realizacion-->
+<!ATTLIST prueba codigo_prueba CDATA #REQUIRED><!-- Declaración atributo codigo_prueba , CDATA, se utiliza cuando el atributo es una cadena de
+    texto y required que debe estar presente-->
+<!ELEMENT motivo_ingreso EMPTY><!-- Declaración elemento terminal motivo_ingreso, EMPTY indica que no puede tener valor, es decir,
+debe ir vacío-->
+<!ATTLIST motivo_ingreso motivo_visita (urgencias|rutinario) #REQUIRED> <!--declaración
+de los atributos asociados al elemento motivo_ingreso, motivo_visita es de tipo Enumeración,solo
+puede usar uno de los valores determinados dentro de un paréntesis y separados por el operador |-->
+<!ELEMENT estado_paciente EMPTY><!-- Declaración elemento terminal estado_paciente-->
+<!ATTLIST estado_paciente estado_llegada (ingresado|alta|uci) #REQUIRED><!--declaración
+    de los atributos asociados al elemento estado_paciente, estado_llegada es de tipo Enumeración,solo
+    puede usar uno de los valores determinados dentro de un paréntesis y separados por el operador |-->
+<!ELEMENT fecha_ingreso (#PCDATA)><!-- Declaración elemento terminal fecha_ingreso-->
+<!ELEMENT datos_adicionales (dato*)><!-- Declaración elemento no terminal datos_adicionales,compuesto por dato , ese signo  * indica que
+que el elemento dato puede no aparecer o aparecer una o más veces-->
+<!ELEMENT dato (#PCDATA)><!-- Declaración elemento terminal dato-->
+<!ELEMENT motivo_prueba EMPTY><!-- Declaración elemento terminal motivo_prueba, EMPTY indica que no puede tener valor, es decir,
+    debe ir vacío-->
+<!ATTLIST motivo_prueba codigo_motivo (rutina|urgencia|diagnostico) #REQUIRED><!--declaración
+    de los atributos asociados al elemento motivo_prueba, codigo_motivo es de tipo Enumeración,solo
+    puede usar uno de los valores determinados dentro de un paréntesis y separados por el operador |-->
+<!ELEMENT doctor_solicitante (nombre, apellidos)><!-- Declaración elemento no doctor_solicitante receta,compuesto por nombre y apellidos -->
+<!ELEMENT fecha_realizacion (#PCDATA)><!-- Declaración elemento terminal fecha_realizacion-->
+<!ELEMENT recetas (receta*)><!-- Declaración elemento no terminal recetas,compuesto por receta , ese signo  * indica que
+    que el elemento dato puede no aparecer o aparecer una o más veces-->
+<!ELEMENT receta (nombre, precio)><!-- Declaración elemento no terminal receta,compuesto por nombre y precio -->
+<!ELEMENT precio (#PCDATA)><!-- Declaración elemento terminal precio-->
+<!ATTLIST precio moneda CDATA #REQUIRED><!-- Declaración atributo moneda-->

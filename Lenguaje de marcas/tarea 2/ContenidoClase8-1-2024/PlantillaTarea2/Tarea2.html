@@ -1,0 +1,235 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento. En este caso, es un documento HTML5 -->
+<html lang="es"> <!-- Inicio del documento HTML. El atributo 'lang' especifica el idioma del contenido del documento -->
+
+<head> <!-- Inicio de la sección 'head' que contiene metadatos y enlaces a hojas de estilo -->
+	<meta charset="UTF-8"> <!-- Especifica la codificación de caracteres para el documento HTML -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Hace que la página web sea responsive -->
+	<title>Práctica tema 2</title>
+	<!-- Define el título del documento, se mostrará en el nombre de la web en el navegador -->
+	<link rel="stylesheet" href="../PlantillaTarea2/css/hojaEstilo.css">
+	<!-- Enlace al archivo externo CSS que contiene los estilos -->
+</head> <!-- Fin de la sección 'head' -->
+
+<body> <!-- Inicio de la sección 'body' que contiene el contenido visible de la página web -->
+
+	<!---------------------- Sección 'cabecera' que contiene la cabecera de la página web ------------------------------->
+
+
+	<header class="cabecera">
+
+		<img src="../PlantillaTarea2/images/logo.png" class="logo" alt="logo de la empresa">
+		<!--Contiene la imagen de la papelería -->
+		<h1>Desarrollo de páginas web: formación.</h1> <!--Textp principal en la cabecera-->
+		<a href="#"
+			class="enlace_img"><!--Enlace que tiene una imagen que hace de banner, nos redirige a una web al clicar en la imagen-->
+			<img src="../PlantillaTarea2/images/banner.png" class="banner_img" alt="banner">
+		</a>
+
+	</header> <!-- Fin de la sección 'header' -->
+
+	<!---------------------- Clase 'cuerpo' que contiene el contenido principal dividida en: clase principal y  navegación  ------------------------->
+
+	<div class="cuerpo"> <!-- Inicio de la sección 'cuerpo' que contiene el contenido principal de la página web -->
+
+		<main class="principal">
+			<!-- Inicio de la sección 'main' que contiene el contenido principal de la página web -->
+			<section class="seccion"> <!-- Inicio de la sección 'section' que contiene una sección de contenido -->
+
+				<h4>Buscador de Bibliografía útil.Disponibilidad para préstamo</h4>
+				<!--Título de la sección , por tamaño elegimos un H4 -->
+				<h5>Lenguajes de marcas (HTML y XMLs)</h5>
+				<form class="formulario"><!--Formulario de búsqueda-->
+					<fieldset><!--Agrupa los campos relacionados que componen el formulario de búsqueda-->
+						<legend>Búsqueda</legend>
+						<div>
+							<!--Mediante el type indicamos el tipo de datos y placeHolder el texto que debe aparecer siempre que no inserte nada en el campo-->
+							<input type="text" placeholder="Titulo">
+							<input type="text" placeholder="Autor">
+							<input type="text" placeholder="ISBN">
+							<button class="boton" type="button">Buscar</button>
+						</div>
+					</fieldset><!--Inicio del elemento que componen el formulario de búsqueda-->
+				</form>
+
+				<table class="tablaSeccionUno"><!--Con esta tabla simulamos los registros encontrados-->
+
+					<tr><!--Mediante rowspan (unimos fila) y colspan(unimos columna)-->
+						<th rowspan="2">Autor</th>
+						<th colspan="3">Publicación</th>
+					</tr>
+					<tr>
+						<th>ISBN</th>
+						<th>Título</th>
+						<th>Año de Edición</th>
+					</tr>
+					<tr>
+						<td>FERNANDO PANIAGUA MARTÍN</td>
+						<td>978-8-42-8340595</td>
+						<td>
+							<a class="enlaceTabla" href="https://www.todostuslibros.com/autor/paniagua-martin-fernando">
+								Lenguaje de marcas y
+								SGI</a>
+						</td>
+						<td>2021</td>
+					</tr>
+					<tr>
+						<td>FERNANDO PANIAGUA MARTÍN</td>
+						<td>978-84-1366-526-9</td>
+						<td>
+							<a class="enlaceTabla" href="https://www.todostuslibros.com/autor/paniagua-martin-fernando">
+								Programación de
+								servicios y procesos</a>
+						</td>
+						<td>2022</td>
+					</tr>
+					<tr>
+						<td>FERNANDO PANIAGUA MARTÍN</td>
+						<td>978-84-9732-182-2</td>
+						<td>
+							<a class="enlaceTabla" href="https://www.todostuslibros.com/autor/paniagua-martin-fernando">
+								Lógica
+								Computacional</a>
+						</td>
+						<td>2003</td>
+					</tr>
+
+				</table>
+			</section> <!-- Fin de la sección 'section' -->
+
+			<!-- Inicio de otra sección 'section' que contiene una publicación -->
+			<section class="seccion">
+
+				<img src="images/portadaLibro.jpg" class="imagenSeccion" alt="Portada del libro">
+				<!-- Imagen del logotipo de la Empresa -->
+
+				<!-- Un artículo es un bloque con contenido completo, que tiene sentido completo si aparece individualmente -->
+				<article> <!-- Inicio del artículo que contiene un bloque de contenido completo -->
+					<h4>Buscador de Bibliografía útil.Disponibilidad para préstamo</h4>
+					<p>
+						<link rel="icon" rel="shortcut icon">
+					</p>
+					<table class="tablaSeccionDos">
+						<tr>
+							<th>ISBN-10</th>
+							<th>Disponibilidad</th>
+						</tr>
+						<tr>
+							<td>8428-340595</td>
+							<td>
+								<a>
+									<img src="images/noExistencia.png">
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>8428-340595</td>
+							<td>
+								<a>
+									<img src="images/existencia.png">
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>8428-340595</td>
+							<td>
+								<a>
+									<img src="images/existencia.png">
+								</a>
+							</td>
+						</tr>
+					</table>
+					<div class="textoSeccion">
+						<p>Lenguajes de marcas y sistemas de gestión de información</p>
+						<p>(FORMACIÓN Y CERTIFICADOS)</p>
+						<P>Este libro aborda los lenguajes de marcas y sistemas de gestión de información, essenciales
+							para la web y los procesos empresariales. Cubre
+							lenguajes de marcas y herramientas para editar, almacenar y acceder a la información.
+						</P>
+						<div class="textoNegrita">
+							<p>También explora sistemas de gestión de información empresarial</p>
+							<p>Escrito por el ingeniero Informático y doncente Fernando Paniagua MARTÍN
+								Nota: 4,715>
+						</div>
+						</p>
+					</div>
+
+				</article> <!-- Fin del artículo -->
+			</section> <!-- Fin de la sección 'section' -->
+		</main> <!-- Fin de la sección 'main' -->
+
+		<nav class="navegacion"> <!-- Inicio de la sección 'nav' que contiene los enlaces de navegación -->
+			<div class="m_claro">
+				<li id="mit_home">
+					<a href="#">Inicio</a>
+				</li>
+				<li id="mit_groups">
+					<a href="#">¿Quienes somos?</a>
+				</li>
+				<li id="mit_contact">Contacto</li>
+				<li class="m_intermedio">Bibliografía
+					<div>
+						<ul class="m_navegacion">
+							<li>
+								Lenguaje de marcas (HTML y XML)
+								<ol type="a">
+									<div class="m_claro">
+										<li>XML</li>
+										<li>DTD y XSD</li>
+										<li>HTML</li>
+									</div>
+								</ol>
+							</li>
+							<li>Hojas de estilo en cascada (CSS)
+								<ol type="a">
+									<div class="m_claro">
+										<li>CSS introducción</li>
+										<li>CSS avanzado</li>
+									</div>
+								</ol>
+							</li>
+							<li>JavaScript
+								<div>
+									<ol type="a">
+										<div class="m_claro">
+											<li>Fundamentos</li>
+											<li>En el navegador</li>
+											<li>Avanzado y frameworks</li>
+										</div>
+									</ol>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="m_claro"></div>
+				</li>
+			</div>
+		</nav> <!-- Fin de la sección 'nav' -->
+	</div><!-- Fin de la sección 'cuerpo' -->
+	<!---------------------- Clase 'Pie' que contiene el información adicional y enlaces de navegación  ------------------------->
+	<footer class="pie">
+		<!-- Inicio de la sección 'footer' que contiene información adicional y enlaces de navegación -->
+		<form> <!-- Inicio del formulario para unirse al boletín informativo -->
+			<div>
+				<p>Únete a nuestro newsletter</p>
+				<form>
+					<input type="email">
+					<button class="boton">Únete</button>
+				</form>
+			</div>
+			<!-- Contenido del formulario -->
+		</form> <!-- Fin del formulario -->
+		<p>José Carlos Manjón Carrasco</p>
+		<div>
+
+			<p class="caja_footer">
+				<img src="../PlantillaTarea2/images/logoTrassierra.png"  alt="Logo iestrassierra">
+				<a href="https://www.iestrassierra.com/">IES Trasierra</a> <!-- Enlace  www.iestrassierra.com-->
+			</p>
+		</div>
+
+
+	</footer> <!-- Fin de la sección 'footer' -->
+</body> <!-- Fin de la sección 'body' -->
+
+</html> <!-- Fin del documento HTML -->

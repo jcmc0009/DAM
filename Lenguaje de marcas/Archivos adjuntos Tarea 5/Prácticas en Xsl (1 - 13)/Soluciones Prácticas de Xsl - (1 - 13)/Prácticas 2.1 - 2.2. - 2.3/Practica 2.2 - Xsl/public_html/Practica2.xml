@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="Practica2.xsl"?>
+
+<gastos>
+    <mes> Septiembre </mes>
+    <gasto desgravable="si">
+        <concepto> Material fungible </concepto>
+        <importe> 450 </importe>
+    </gasto>
+    <gasto desgravable="no">
+        <concepto> Gastos sin justificar </concepto>
+        <importe> 250 </importe>
+    </gasto>
+    <gasto desgravable="si">
+        <concepto> Transporte </concepto>
+        <importe> 300 </importe>
+    </gasto>    
+</gastos>
+

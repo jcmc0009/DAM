@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!--  Etiqueta de apertura del esquema -->
+    <xs:element name="expedientes">
+        <xs:complexType>
+            <!-- xs:complexType, entre sus etiquetas de inicio y cierre se definen los elementos de
+            tipo complejo -->
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <!-- xs:sequence, permite construir elementos complejos mediante la
+                definición de los elementos que los forman en una secuencia determinada 
+                minOccurs y  maxOccurs, definen el número de ocurrencias del elemento, siendo el número de veces el
+                número que esté entrecomillado o si es unbounded que es un número ilimitado de veces
+            -->
+                <xs:element ref="expediente" />
+                <!--  ref: el elemento expediente está declarado en otro lugar del esquema.  -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="expediente">
+        <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                <xs:element ref="datos_paciente" />
+                <!--  ref: el elemento datos_paciente está declarado en otro lugar del esquema.  -->
+                <xs:element ref="pruebas_medicas" />
+                <!--  ref: el elemento pruebas_medicas está declarado en otro lugar del esquema.  -->
+                <xs:element ref="recetas" />
+                <!--  ref: el elemento recetas está declarado en otro lugar del esquema.  -->
+            </xs:sequence>
+            <xs:attribute name="codigo_expediente" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:ID">
+                        <!--en
+                        la etiqueta xs:restriction definimos cómo debe ser el atributo
+                            base="xs:ID" indica que el atributo es único, y no podrá repetirse -->
+                        <xs:length value="10" />
+                        <xs:pattern
+                            value="[a-zA-Z]{4}[0-9]{6}">
+                        </xs:pattern>
+                        <!--  Validar codigo_expediente que debe tener 4 letras y 6 dígitos, haciendo
+                        una longintud de 10 caracteres -->
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="datos_paciente">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="datos_generales">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="nombre" />
+                            <!-- type="xs:string" indica que el elemento contedrá una cadena de
+                            caracteres-->
+                            <xs:element name="apellidos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="primer_apellido" />
+                                        <xs:element ref="segundo_apellido" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="domicilio">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="via" />
+                                        <xs:element ref="nombre_via" />
+                                        <xs:element ref="numero" />
+                                        <xs:element ref="provincia" />
+                                        <xs:element ref="localidad" />
+                                        <xs:element ref="codigo_postal" />
+                                        <!--  ref: todos los elementos que componen el elemento
+                                        domicilio está declarado en otro
+                                        lugar del esquema.  -->
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="edad" type="xs:positiveInteger" />
+                            <!--type="xs:positiveInteger"
+                            indica que el elemento debe ser un número entero positivo, por lo que
+                            eliminamos la posibilidad de introducir números menores o iguales a 0 -->
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="motivo_ingreso">
+                    <xs:complexType>
+                        <xs:sequence></xs:sequence>
+                        <xs:attribute name="motivo_visita" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="urgencias|rutinario"></xs:pattern>
+                                    <!-- en la etiqueta xs:restriction  indicamos qué valores
+                                    aceptamos una cadena de caracteres
+                                    en la etiqueta xs:pattern este caso sólo aceptaremos los valores que estén dentro de
+                                    value, siendo separados por elemento "|" -->
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="estado_paciente">
+                    <xs:complexType>
+                        <xs:attribute name="estado_llegada" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="ingresado|alta|uci"></xs:pattern>
+                                    <!-- en la etiqueta xs:restriction  indicamos qué valores
+                                    aceptamos una cadena de caracteres
+                                    en la etiqueta xs:pattern este caso sólo aceptaremos los valores que estén dentro de
+                                    value, siendo separados por elemento "|" -->
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="fecha_ingreso" type="xs:date" />
+                <!-- type="xs:date" indica que el elemento es de tipo fecha, siendo el formato
+                "aaaa-mm-dd" -->
+                <xs:element name="datos_adicionales">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="dato" type="xs:string"
+                                minOccurs="0" maxOccurs="unbounded" />
+                            <!--     minOccurs="0" maxOccurs="unbounded" indica que el elemento dato,
+                            puede no estar al ser el valor de minOccurs 0 o aparecer múltiples
+                            vecesp or maxOccurs tener el valor de unbounded-->
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attr
+            
+            
+            
+    
+    
+    
+    
+    
+    
+    
+            ibute name="dni" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:length value="9" />
+                        <xs:pattern
+                            value="[0-9]{8}[a-zA-Z]"></xs:pattern>
+                        <!--  Validar codigo_expediente que debe tener 8 números y una letra,
+                        haciendo una longintud de 9 caracteres -->
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="nombre" type="xs:string" />
+    <xs:element name="primer_apellido" type="xs:string" />
+    <xs:element name="segundo_apellido" type="xs:string" />
+    <xs:element name="via" type="xs:string" />
+    <xs:element name="nombre_via" type="xs:string" />
+    <xs:element name="numero" type="xs:positiveInteger" />
+    <xs:element name="provincia" type="xs:string" />
+    <xs:element name="localidad" type="xs:string" />
+    <xs:element name="codigo_postal" type="xs:positiveInteger" />
+    <xs:element name="pruebas_medicas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="prueba" minOccurs="1" maxOccurs="unbounded" />
+                <!-- idicamos que el elemento prueba , debe aparecer al menos 1 vez -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="prueba">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="motivo_prueba">
+                    <xs:complexType>
+                        <xs:attribute name="codigo_motivo" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="rutina|urgencia|diagnostico"></xs:pattern>
+                                    <!-- en la etiqueta xs:restriction  indicamos qué valores
+                                    aceptamos una cadena de caracteres
+                                    en la etiqueta xs:pattern este caso sólo aceptaremos los valores que estén dentro de
+                                    value, siendo separados por elemento "|" -->
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="doctor_solicitante">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="nombre" />
+                            <xs:element name="apellidos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="primer_apellido" />
+                                        <xs:element ref="segundo_apellido" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <!--  ref: todos los elementos que componen el elemento
+                            doctor_solicitante está declarado en otro lugar del esquema.  -->
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="fecha_realizacion" type="xs:date" />
+                <!-- type="xs:date" indica que el elemento es de tipo fecha, siendo el formato
+                "aaaa-mm-dd" -->
+            </xs:sequence>
+            <xs:attribute name="codigo_prueba" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:length value="6" />
+                        <xs:pattern
+                            value="[a-zA-Z]{2}[0-9]{4}">
+                            <!--  Validar codigo_prueba que debe tener 2 letras y 4 números,
+                        haciendo una longintud de 6 caracteres -->
+                        </xs:pattern>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="recetas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="receta" minOccurs="0" maxOccurs="unbounded" />
+                <!--  minOccurs="0" idica que el elemento receta puede no estar presente
+                     maxOccurs="unbounded" indica que puede estar presente un número ilimitado de veces -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="receta">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string" />
+                <xs:element name="precio">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:decimal">
+                                <!-- xs:float indica que el elemento puede contener decimales, he
+                                cogido esa base por ser mas restrictivo-->
+                                <xs:attribute name="moneda" type="xs:string" use="required" />
+                                <!--  Atributo de precio para incluir el valor "€", que  es símbolo del euro, -->
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

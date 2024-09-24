@@ -1,0 +1,7 @@
+<!ELEMENT desayunos (desayuno)+>
+<!ELEMENT desayuno (nombre,precio,descripcion,categorias)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio moneda CDATA #FIXED "euro">
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT categorias (#PCDATA)>
