@@ -1,0 +1,31 @@
+.card {
+    /* define aquí los estilos 
+       para el elemento card */
+    -fx-background-image: url("assets/interfaz/reversoCarta.png");
+}
+.label{
+    -fx-font-size:  25px;
+    -fx-font-style:oblique;
+    -fx-font-weight:bold;
+    -fx-text-fill: #dc143c;
+    -fx-color:white;
+    -fx-font-family: "Arial";
+
+
+
+}
+.button{
+    -fx-cursor:hand;
+    -fx-background-color:brown;
+    -fx-background-radius:15;
+    -fx-color: white;
+    -fx-font-family: "Helvetia"; 
+    -fx-font-size: 10pt;
+
+}
+.botonera{
+    -fx-test-fill: yellow;
+
+
+}
+/* resto de estilos (define un mínmo de 15 reglas)*/
