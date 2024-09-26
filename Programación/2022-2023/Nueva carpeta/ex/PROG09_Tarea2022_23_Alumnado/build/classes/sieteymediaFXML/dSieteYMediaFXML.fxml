@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.layout.AnchorPane?>
-
-<AnchorPane id="AnchorPane" fx:id="main" prefHeight="610.0" prefWidth="862.0" styleClass="panel" stylesheets="@estiloCSS.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sieteymediaFXML.SieteYMediaFXMLController" />
