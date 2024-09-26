@@ -1,0 +1,41 @@
+create table CONTACTOS ( 
+   ID int primary key, 
+   NOMBRE varchar(20), 
+  PROVINCIA varchar(20)
+)ENGINE=INNODB; 
+
+insert into CONTACTOS values(1, 'PABLO', 'ALMERIA'); 
+insert into CONTACTOS values(2, 'MARIO', 'GRANADA'); 
+insert into CONTACTOS values(3, 'LUCIA', 'MADRID'); 
+ 
+create table CORREOS ( 
+   CORREO_ID int primary key, 
+   ID_CONTACTO int NOT NULL, 
+   CORREO varchar(100) NOT NULL, 
+   INDEX (ID_CONTACTO), 
+   FOREIGN KEY (ID_CONTACTO) REFERENCES CONTACTOS(ID) 
+)ENGINE=INNODB; 
+ 
+insert into CORREOS values(1, 1, 'pablo@yahoo.com'); 
+insert into CORREOS values(2, 1, 'pablo@gmail.com'); 
+insert into CORREOS values(3, 2, 'mario@yahoo.com'); 
+insert into CORREOS values(4, 2, 'mario@empresa.com'); 
+insert into CORREOS values(5, 2, 'mario@jaspersoft.com'); 
+insert into CORREOS values(6, 3, 'lmc@dominio.es'); 
+insert into CORREOS values(7, 3, 'lucy@algunemail.com'); 
+insert into CORREOS values(8, 3, 'luciamartos@organizacion.org'); 
+ 
+create table TELEFONOS ( 
+   TELEFONO_ID int primary key, 
+   ID_CONTACTO int NOT NULL, 
+   TELEFONO varchar(10) NOT NULL, 
+   INDEX (ID_CONTACTO), 
+   FOREIGN KEY (ID_CONTACTO) REFERENCES CONTACTOS(ID) 
+)ENGINE=INNODB; 
+ 
+insert into TELEFONOS values(1, 1, '111111111'); 
+insert into TELEFONOS values(2, 1, '222222222'); 
+insert into TELEFONOS values(3, 1, '333333333'); 
+insert into TELEFONOS values(4, 2, '444444444'); 
+insert into TELEFONOS values(5, 3, '555555555'); 
+insert into TELEFONOS values(6, 3, '666666666'); 

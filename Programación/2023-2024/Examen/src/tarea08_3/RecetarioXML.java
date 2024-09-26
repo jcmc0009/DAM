@@ -1,6 +1,6 @@
 package tarea08_3;
 
-import com.thoughtworks.xstream.XStream;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;

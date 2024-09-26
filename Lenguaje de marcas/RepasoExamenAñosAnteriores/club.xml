@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<club>
+ <socios>
+  <socio DNI="12344345S">
+    <apenom>López Pérez, Juan</apenom>
+    <direc>Plaza de España, 10</direc>
+    <pobla>Madrid</pobla>
+    <telef>612345678</telef>
+  </socio>
+  <socio DNI="43483437T">
+    <apenom>García Martínez, Ana</apenom>
+    <direc>Calle Cruz Conde, 15</direc>
+    <pobla>Córdoba</pobla>
+    <telef>723456789</telef>
+  </socio>
+  <socio DNI="88234942R">
+    <apenom>Rodríguez Gómez, Pedro</apenom>
+    <direc>Avenida de la Victoria, 20</direc>
+    <pobla>Córdoba</pobla>
+    <telef>634567890</telef>
+  </socio>
+  <socio DNI="88254662V">
+    <apenom>Sánchez Aguilera, Carmen</apenom>
+    <direc>Paseo de la Castellana, 30</direc>
+    <pobla>Barcelona</pobla>
+    <telef>745678901</telef>
+  </socio>
+ </socios>
+ <servicios>
+  <servicio cod="a1" nombre="Clases de Tenis"/>
+  <servicio cod="a2" nombre="Piscina"/>
+  <servicio cod="a3" nombre="Yoga"/>
+  <servicio cod="a4" nombre="Gimnasio"/>
+  <servicio cod="a5" nombre="Clases de Baile"/>
+  <servicio cod="a6" nombre="Cafetería"/>
+ </servicios>
+ <contratos>
+  <contrato DNI_S="12344345S" serv="a1" precio="40"/>
+  <contrato DNI_S="43483437T" serv="a1" precio="50"/>
+  <contrato DNI_S="88234942R" serv="a1" precio="60"/>
+  <contrato DNI_S="12344345S" serv="a2" precio="100"/>
+  <contrato DNI_S="43483437T" serv="a2" precio="80"/>
+  <contrato DNI_S="88234942R" serv="a2" precio="90"/>
+  <contrato DNI_S="88254662V" serv="a3" precio="75"/>
+  <contrato DNI_S="88234942R" serv="a4" precio="60"/>
+  <contrato DNI_S="12344345S" serv="a4" precio="65"/>
+  <contrato DNI_S="43483437T" serv="a4" precio="70"/>
+  <contrato DNI_S="12344345S" serv="a5" precio="55"/>
+  <contrato DNI_S="88254662V" serv="a6" precio="120"/>
+ </contratos>
+</club>
+

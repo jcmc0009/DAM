@@ -28,7 +28,7 @@ public class Ejercicio5{
         String rutaZIP = ruta+ "/recursos/";
         
         //ESTO ES LO ÚNICO QUE TENÉIS QUE MODIFICAR
-        String nombreZIP = "Manjon_Carrasco_JoseCarlos_PROG08_Tarea.zip";
+        String nombreZIP = "Apellido1_Apellido2_Nombre_PROG08_Tarea.zip";
         
         // Variables de salida
         

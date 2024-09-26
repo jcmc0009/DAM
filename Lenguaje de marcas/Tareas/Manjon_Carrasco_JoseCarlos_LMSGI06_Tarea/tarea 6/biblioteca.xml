@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library code="14007945" lang="es">
+    <data>
+        <name>Libros segunda mano</name>
+        <location>
+            <address>Av. Arroyo del Moro, s/n</address>
+            <city>Córdoba</city>
+            <town>Córdoba</town>
+            <zip_code>14011</zip_code>
+        </location>
+        <telephone>957734900</telephone>
+        <url>http://www.iestrassierra.com</url>
+    </data>
+    <catalog>
+        <book id="1" category="adventures">
+            <title lang="en">Harry Potter and the Philosopher's Stone</title>
+            <year>2005</year>
+            <price>12.30</price>
+            <pages>288</pages>
+            <edition>hardcover</edition>
+            <authors>
+                <author>J.K. Rowling</author>
+            </authors>
+        </book>
+        <book id="2" category="horror">
+            <title lang="en">IT</title>
+            <year>2017</year>
+            <price>17.05</price>
+            <pages>1504</pages>
+            <edition>paperback</edition>
+            <authors>
+                <author>Stephen King</author>
+            </authors>
+        </book>
+        <book id="3" category="horror">
+            <title lang="en">Joyland</title>
+            <year>2014</year>
+            <price>9.95</price>
+            <pages>304</pages>
+            <edition>paperback</edition>
+            <authors>
+                <author>Stephen King</author>
+            </authors>
+        </book>
+        <book id="4" category="horror">
+            <title lang="es">Drácula (Clásicos ilustrados)</title>
+            <year>2018</year>
+            <price>15.15</price>
+            <pages>496</pages>
+            <edition>paperback</edition>
+            <authors>
+                <author>Stephen King</author>
+            </authors>
+        </book>
+        <book id="5" category="science-fiction">
+            <title lang="es">Trilogía de la Fundación</title>
+            <year>2022</year>
+            <price>33.15</price>
+            <pages>832</pages>
+            <edition>hardcover</edition>
+            <authors>
+                <author>Isaac Asimov</author>
+            </authors>
+        </book>
+        <book id="6" category="software-development">
+            <title lang="en">XQuery Kick Start</title>
+            <year>2003</year>
+            <price>49.99</price>
+            <pages>342</pages>
+            <edition>paperback</edition>
+            <authors>
+                <author>James McGovern</author>
+                <author>Per Bothner</author>
+                <author>Kurt Cagle</author>
+                <author>James Linn</author>
+                <author>Vaidyanathan Nagarajan</author>
+            </authors>
+        </book>
+        <book id="7" category="software-development">
+            <title lang="en">Learning XML</title>
+            <year>2003</year>
+            <price>39.95</price>
+            <pages>417</pages>
+            <edition>paperback</edition>
+            <authors>
+                <author>Erik T. Ray</author>
+            </authors>
+        </book>
+    </catalog>
+    <courses>
+        <course id="1" topic="writing" lang="es">
+            <title>Creación literaria</title>
+            <room>5</room>
+            <date>
+                <day>16</day>
+                <month>1</month>
+                <year>2024</year>
+            </date>
+            <teachers>
+                <teacher>Luis del Moral</teacher>
+            </teachers>
+        </course>
+        <course id="2" topic="erasmus" lang="en">
+            <title>Writting an application letter</title>
+            <room>3</room>
+            <date>
+                <day>19</day>
+                <month>1</month>
+                <year>2024</year>
+            </date>
+            <teachers>
+                <teacher>Antonio Calvo</teacher>
+                <teacher>Sergio Puerta</teacher>
+            </teachers>
+        </course> 
+        <course id="3" topic="erasmus" lang="en">
+            <title>Getting ready for your travel</title>
+            <room>3</room>
+            <date>
+                <day>24</day>
+                <month>1</month>
+                <year>2024</year>
+            </date>
+            <teachers>
+                <teacher>Antonio Calvo</teacher>
+                <teacher>Sergio Puerta</teacher>
+            </teachers>
+        </course>         
+    </courses>
+</library>
