@@ -14,5 +14,5 @@
 * [Desarrollo de interfaces](https://github.com/jcmc0009/DAM/tree/91a706353b66a9aab4620a407becd58c149df085/Desarrollo%20de%20interfaces)
 * [Programación de servicios y procesos](https://github.com/jcmc0009/DAM/tree/91a706353b66a9aab4620a407becd58c149df085/Programaci%C3%B3n%20de%20servicios%20y%20procesos)
 * [Programación multimedia y dispositivos móviles](https://github.com/jcmc0009/DAM/tree/91a706353b66a9aab4620a407becd58c149df085/Programaci%C3%B3n%20multimedia%20y%20dispositivos%20m%C3%B3viles)
-* [Sistemas de gestión empresarial](https://github.com/jcmc0009/DAM/tree/91a706353b66a9aab4620a407becd58c149df085/Sistemas%20de%20gesti%C3%B3n%20empresarial)
+* [Sistemas de gestión empresarial](https://github.com/jcmc0009/DAM/tree/main/Sistemas%20de%20gesti%C3%B3n%20empresarial)
 * [Empresa e iniciativa emprendedora]\(Convalidada)
